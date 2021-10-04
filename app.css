@@ -1,0 +1,81 @@
+html{
+    box-sizing: border-box;
+}
+*,*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    background: #acb6e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    
+
+}
+.form_usu{
+    margin-top: 5rem;
+}
+.contenedor_form{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.formulario{
+    background-color: white;
+    padding: 2rem;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #B2FEFA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 10px black;
+}
+.login_titulo{
+    text-align: center;
+    margin-top: 0;
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.inputs{
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(175, 175, 175);
+    outline: none;
+    font-size: 1.2rem;
+    width: 100%;
+    box-shadow: 0px 2px 2px black;
+}
+.boton{
+    border: none;
+    padding: .8rem 2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(227, 237, 255);
+    box-shadow: 0px 0px 2px black;
+
+
+}
+.info{
+    text-align: center;
+    margin-top: 2rem;
+}
+.info a{
+    text-decoration: none;
+    color: rgb(112, 112, 253);
+    cursor: pointer;
+    position: relative;
+}
+label{
+    display: block;
+}
+
+
+
