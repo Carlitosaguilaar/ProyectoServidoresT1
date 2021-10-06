@@ -1,5 +1,5 @@
 <?php
- 
+ /*
     $db_host = "localhost";
     $db_name = "";
     $db_user = "";
@@ -25,7 +25,7 @@
     else {
         $users = mysqli_fetch_all($results, MYSQLI_ASSOC);
     }
- 
+ */
 ?>
 
 
