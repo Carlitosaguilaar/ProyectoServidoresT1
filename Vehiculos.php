@@ -1,10 +1,41 @@
+<?php
+ 
+    $db_host = "localhost";
+    $db_name = "";
+    $db_user = "";
+    $db_pass = "";
+ 
+    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+ 
+    if (mysqli_connect_error()) {
+        echo mysqli_connect_error();
+        exit;
+    }
+ 
+    $sql = "SELECT *
+            FROM user
+            ORDER BY date_entry;";
+ 
+    $results = mysqli_query($conn, $sql);
+ 
+    if ($results === false) {
+        echo mysqli_error($conn);
+    } 
+    
+    else {
+        $users = mysqli_fetch_all($results, MYSQLI_ASSOC);
+    }
+ 
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" type="text/css" href="\xampp\htdocs\ProyectoServidoresT1\app.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
 
     <title>Lista de Vehículos</title>
 </head>
