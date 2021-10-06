@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="header.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/CSS/app.css">
+    <link rel="stylesheet" href="estilos/CSS/header.css">
+
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo">Proyecto Vehículos</h1>
-
-    </header>
+    <?php require 'partials/header.php '?>
     <div class="contenedor_form">
         <form action="" class="formulario">
             <h2 class="login_titulo">Login</h2>
@@ -27,5 +25,7 @@
         </form>
 
     </div>
+
+
 </body>
 </html>
