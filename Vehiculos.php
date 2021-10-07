@@ -35,26 +35,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="estilos/app.css">
 
     <title>Lista de Vehículos</title>
 </head>
 <body>
 
+    <?php require "header_footer/header.php" ?>
+
     <div class="pagina">    
         
-        <h1 class="titulo">Lista de Vehículos</h1>
-    
-        <h3>Datos Usuario</h3>
-    
-        <input class="boton" type="button" value="Editar Usuario">
-    
-        <br>
-    
-        <h3>Listado de Vehículos</h3>
-    
-        <input class="boton" type="button" value="Añadir vehículo">
-    
+        <div class="contenido">
+            <h1>Lista de Vehículos</h1>
+        
+            <h3>Datos Usuario</h3>
+        
+            <input class="boton" type="button" value="Editar Usuario">
+        
+            <br>
+        
+            <h3>Listado de Vehículos</h3>
+        
+            <input class="boton" type="button" value="Añadir vehículo">
+        </div>
     </div>
 
 </body>
