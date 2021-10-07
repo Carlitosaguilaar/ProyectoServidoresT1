@@ -1,5 +1,6 @@
 html{
     box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
 }
 *,*::after,
 *::before{
@@ -9,23 +10,44 @@ body{
     background: #acb6e5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
     
     
-
+    
 }
 
 /* Header */
-.header{
-    width: 100%;
+.headerr{
     border-bottom: 2px solid rgb(71, 71, 71);
+    background-color: rgb(158, 158, 158);
+    padding: 1.1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+
 
 }
-.header a{
+.headerr a{
     text-decoration: none;
     color: black;
     padding: 2rem;
     text-align: center;
     cursor: pointer;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.navegador{
+    display: flex;
+    align-items: center;
+}
+.headerr .navegador a{
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 400;
 }
 
 /* Esto es un comentario*/
@@ -73,10 +95,13 @@ body{
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 10px;
-    background-color: rgb(227, 237, 255);
+    background-color: rgb(255, 174, 0);
     box-shadow: 0px 0px 2px black;
-
-
+    color: rgb(41, 41, 41);
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+    
+    
 }
 .info{
     text-align: center;
@@ -91,8 +116,3 @@ body{
 label{
     display: block;
 }
-
-
-
-
-
