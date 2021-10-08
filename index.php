@@ -1,3 +1,8 @@
+<?php  
+    $conn = require "conexion_database.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

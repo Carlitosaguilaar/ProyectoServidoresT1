@@ -116,3 +116,10 @@ body{
 label{
     display: block;
 }
+
+
+/* Estilos al usuario */
+.titulo_usu{
+    padding: 1rem;
+    
+}
