@@ -42,10 +42,10 @@
 <body>
 
     <?php require "header_footer/header.php" ?>
-
-    <div class="pagina">    
+    
+    <div class="contenedor_form">
+        <div class="formulario">    
         
-        <div class="contenido">
             <h1>Lista de Vehículos</h1>
         
             <h3>Datos Usuario</h3>
@@ -57,6 +57,7 @@
             <h3>Listado de Vehículos</h3>
         
             <input class="boton" type="button" value="Añadir vehículo">
+            
         </div>
     </div>
 
