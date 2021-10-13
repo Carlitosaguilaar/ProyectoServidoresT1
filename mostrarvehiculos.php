@@ -5,25 +5,39 @@
         $consulta2 = "";
         $results = mysqli_query($conn, $consulta);
         if ($results){
+            echo" <div class=\"titulo_usu\">";
+            echo" <div class=\"contenedor_tablas\">";
+            echo " <table border=\"1px\">";
+            echo "<tr><th>Nombre</th><th>Email</th><th>Teléfono</th></tr>";
             while ($row = $results->fetch_array()){
+
                 $nombre = $row['Nombre'];
                 $email = $row['Email'];
-                
-
+                $telefono = $row['Telefono'];
                 ?> 
-                    <div class="titulo_usu">
-                        <h3><?php echo $nombre  ?></h3>
-                        <div class="info_usu">
-                            <p>
-                                <b>Email: </b><?php  echo $email ?>
-                            </p>
-                        </div>
-                    </div>
+                    
+
+                            
+                           
+                                
+                                <tr>
+                                    <td><?php echo $nombre ?></td>
+                                    <td><?php echo $email ?></td>
+                                    <td><?php echo $telefono ?></td>
+    
+                                </tr>    
+                         
                 <?php
             }
+            echo"</table>";
+            echo"</div>";   
+            echo"</div>";
+
+            
 
 
         }
     }
 
 ?>
+

@@ -123,3 +123,15 @@ label{
     padding: 1rem;
     
 }
+.titulo_usu table{
+    border: 3px solid green;
+
+}
+.contenedor_tablas{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+}
+.contenedor_tablas h3{
+    flex-basis: 30rem;
+}
