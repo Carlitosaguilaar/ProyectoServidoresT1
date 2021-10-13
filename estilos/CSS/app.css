@@ -76,7 +76,6 @@ body{
     text-align: center;
     margin-top: 0;
 }
-
 .campo{
     margin-bottom: 1rem;
 }
@@ -116,4 +115,23 @@ body{
 }
 label{
     display: block;
+}
+
+
+/* Estilos al usuario */
+.titulo_usu{
+    padding: 1rem;
+    
+}
+.titulo_usu table{
+    border: 3px solid rgb(255, 255, 255);
+
+}
+.contenedor_tablas{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+}
+.contenedor_tablas h3{
+    flex-basis: 30rem;
 }

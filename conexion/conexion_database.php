@@ -14,16 +14,4 @@
 
     echo "Conexión correcta";
  
-    $consulta = "SELECT telefono FROM usuarios";
- 
-    $results = mysqli_query($conn, $consulta);
- 
-    if ($results === false) {
-        echo mysqli_error($conn);
-    } else {
-        $users = mysqli_fetch_all($results, MYSQLI_ASSOC);
- 
-        print_r($users);
-    }
- 
 ?>
