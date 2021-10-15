@@ -13,7 +13,7 @@
     <?php require "partials/header.php" ?>
     
     <div class="contenedor_form">
-        <div class="formulario">    
+          
         
             <h1>Lista de Vehículos</h1>
         
@@ -113,7 +113,7 @@
 
             <input class="boton" type="button" value="Añadir vehículo">
             
-        </div>
+        
     </div>
 
 </body>
