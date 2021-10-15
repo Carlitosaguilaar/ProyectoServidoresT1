@@ -1,28 +1,64 @@
 <?php 
-
-$usu = $_GET["ID_Usuario"];
-if (!$usu){
-    echo "esto no va";
-}
-
-$inc = require "conexion/conexion_database.php";
-
-if ($inc){
-
-    $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
-    $results = mysqli_query($conn, $consulta);
-
-    if ($results){
-
-        while ($row = $results->fetch_array()){
-
-            $nombre = $row['Nombre'];
-            $email = $row['Email'];
-            $telefono = $row['Telefono'];
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $usu = $_GET["ID_Usuario"];
+    if ($usu){
+    
+        $inc = require "conexion/conexion_database.php";
+    
+        if ($inc){
+    
+            $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
+            $results = mysqli_query($conn, $consulta);
+    
+            if ($results){
+    
+                while ($row = $results->fetch_array()){
+    
+                    $nombre = $row['Nombre'];
+                    $email = $row['Email'];
+                    $contra = $row['Contraseña'];
+    
+                }
+            }
         }
     }
+    else{
+        echo "esto no va";
+    }
+
 }
+
+
+
+
 ?>
+<?php
+ 
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  
+     require 'conexion/conexion_database.php';
+  
+     $sql = "UPDATE usuarios (Nombre,Contraseña,Email )
+             VALUES ('" . $_POST['nombre'] . "','"
+                        . $_POST['contra'] . "','"
+                        . $_POST['email'] . "')";
+  
+     $results = mysqli_query($conn, $sql);
+  
+     if ($results === false) {
+  
+         echo mysqli_error($conn);
+  
+     } else {
+  
+         $id = mysqli_insert_id($conn);
+         echo "Inserted record with ID: $id";
+  
+     }
+  
+ }
+  
+ ?>
 
 <?php 
 
@@ -55,23 +91,25 @@ if ($inc){
                 
                 <h1>Lista de Vehículos</h1>
 
-                <form>
+                <form action="Vehiculos copy.php" method="$_POST">
                     <div class="campo">
                         <label for="nombre">Nombre: <?php echo $nombre?></label>
-                        <input type="tel" id="nombre" name="nombre" placeholder="Nuevo nombre">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" required>
 
                     </div>
 
                     <div class="campo">
                         <label for="email">Email: <?php echo $email?></label>
-                        <input type="tel" id="email" name="email"  placeholder="Nuevo Email">
+                        <input type="tel" id="email" name="email"  placeholder="Nuevo Email" value="<?php echo $email?>"required>
                     </div>
 
                     <div class="campo">
-                        <label for="telefono">Telefono: <?php echo $telefono?></label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Nuevo teléfono">
+                        <label for="contra">Contraseña:  <?php echo $contra?></label>
+                        <input type="password" id="contra" name="contra" placeholder="Nueva Contraseña" required>
 
                     </div>
+
+                    <input type="hidden" value="<?php echo $usu ?>" name="cod_usu">
 
                     <input type="submit" class="boton" name="submit" value="Editar usuario">
                 </form>
