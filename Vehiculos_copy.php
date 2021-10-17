@@ -2,7 +2,7 @@
 
 $usu = $_GET["ID_Usuario"];
 if (!$usu){
-    echo "esto no va";
+    header("Location:registro_usu.php");
 }
 
 $inc = require "conexion_database.php";
@@ -127,10 +127,9 @@ if ($inc){
                     </div> 
 
                 </div>
+                <a href="registro_vehiculo.php" class="boton">Añadir Vehículo</a>
                 
-                <input class="boton" type="button" value="Añadir vehículo">
-                
-            </div>
+            </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
         
     </body>

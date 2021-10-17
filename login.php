@@ -41,7 +41,6 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <?php require "partials/header.php"?>
     <?php 
          if ($password == $contraseñaBBDD){
 
