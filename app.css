@@ -136,3 +136,6 @@ label{
 .contenedor_tablas h3{
     flex-basis: 30rem;
 }
+.centrado{
+    background-color: red;
+}
