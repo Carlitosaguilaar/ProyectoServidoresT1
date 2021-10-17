@@ -14,12 +14,15 @@ body{
     padding: 0;
     font-family: 'Prompt', sans-serif;
     
+    
+    
+    
 }
 
 /* Header */
 .headerr{
     border-bottom: 2px solid rgb(71, 71, 71);
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(155, 155, 155);
     padding: 1.1rem;
     margin-bottom: 2rem;
     display: flex;
@@ -122,7 +125,7 @@ label{
     
 }
 .titulo_usu table{
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid green;
 
 }
 .contenedor_tablas{
@@ -132,4 +135,7 @@ label{
 }
 .contenedor_tablas h3{
     flex-basis: 30rem;
+}
+.centrado{
+    background-color: red;
 }

@@ -1,69 +1,30 @@
 <?php 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $usu = $_GET["ID_Usuario"];
-    if ($usu){
-    
-        $inc = require "conexion/conexion_database.php";
-    
-        if ($inc){
-    
-            $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
-            $results = mysqli_query($conn, $consulta);
-    
-            if ($results){
-    
-                while ($row = $results->fetch_array()){
-    
-                    $nombre = $row['Nombre'];
-                    $email = $row['Email'];
-                    $contra = $row['Contraseña'];
-    
-                }
-            }
-        }
-    }
-    else{
-        echo "esto no va";
-    }
 
-    
+$usu = $_GET["ID_Usuario"];
+if (!$usu){
+    echo "esto no va";
 }
 
+$inc = require "conexion/conexion_database.php";
 
+if ($inc){
 
+    $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
+    $results = mysqli_query($conn, $consulta);
 
+    if ($results){
+
+        while ($row = $results->fetch_array()){
+
+            $nombre = $row['Nombre'];
+            $email = $row['Email'];
+            $telefono = $row['Telefono'];
+        }
+    }
+}
 ?>
-<?php
- 
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
-     require 'conexion/conexion_database.php';
-  
-     $sql = "UPDATE usuarios (Nombre,Contraseña,Email )
-             VALUES ('" . $_POST['nombre'] . "','"
-                        . $_POST['contra'] . "','"
-                        . $_POST['email'] . "')";
-  
-     $results = mysqli_query($conn, $sql);
-  
-     if ($results === false) {
-  
-         echo mysqli_error($conn);
-  
-     } else {
-  
-         $id = mysqli_insert_id($conn);
-         echo "Inserted record with ID: $id";
-  
-     }
-  
- }
-  
- ?>
 
 <?php 
-
-$inc = require "conexion/conexion_database.php";
 
 if ($inc){
     
@@ -78,8 +39,7 @@ if ($inc){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" type="text/css" href="estilos/CSS/app.css">
+        <link rel="stylesheet" href="estilos/app.css">
         
         <title>Lista de Vehículos</title>
     </head>
@@ -92,27 +52,31 @@ if ($inc){
                 
                 <h1>Lista de Vehículos</h1>
 
-                <form action="Vehiculos copy.php" method="$_POST">
+                <form method="POST" action="editar_usuario.php">
                     <div class="campo">
                         <label for="nombre">Nombre: <?php echo $nombre?></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" class="inputs" required>
 
                     </div>
 
                     <div class="campo">
                         <label for="email">Email: <?php echo $email?></label>
-                        <input type="tel" id="email" name="email"  placeholder="Nuevo Email" value="<?php echo $email?>"required>
+                        <input type="tel" id="email" name="email"  placeholder="Nuevo Email" class="inputs" required>
                     </div>
 
                     <div class="campo">
-                        <label for="contra">Contraseña:  <?php echo $contra?></label>
-                        <input type="password" id="contra" name="contra" placeholder="Nueva Contraseña" required>
+                        <label for="telefono">Telefono: <?php echo $telefono?></label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Nuevo teléfono" class="inputs" required>
 
                     </div>
+                    <div class="campo">
 
-                    <input type="hidden" value="<?php echo $usu ?>" name="cod_usu">
+                        <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $usu ?>" class="inputs" required>
 
-                    <input type="submit" class="boton" name="submit" value="Editar usuario">
+                    </div>
+                    
+
+                    <input type="submit" class="boton" name="submit" value="Editar usuario" class="inputs">
                 </form>
 
                 
@@ -144,15 +108,15 @@ if ($inc){
                                 
                                 
                             
-                            ?>
+                            
 
-                            <tr>
-                                <td><?php echo $matricula ?></td>
-                                <td><?php echo $marca ?></td>
-                                <td><?php echo $modelo ?></td>
-                            </tr> 
+                            echo("<tr>
+                                <td> ".$matricula." </td>
+                                <td> ".$marca." </td>
+                                <td> ".$modelo." </td>
+                            </tr>"); 
 
-                            <?php 
+                            
                         
                                 } // Llave que cierra el bucle while
                             } //Llave que cierra el if
@@ -167,7 +131,7 @@ if ($inc){
                 <input class="boton" type="button" value="Añadir vehículo">
                 
             </div>
-        </div>
+        </div> <!-- cierre de contenedor_form -->
         
     </body>
-    </html>
+</html>
