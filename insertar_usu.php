@@ -11,8 +11,7 @@
     $inc = require "conexion/conexion_database.php";
     if($inc){
 
-        $consulta = "INSERT INTO usuarios (Nombre, Contraseña, Email, Telefono)
-        VALUES ('$nombre','$contraseña','$email', '$telefono')";
+        $consulta = "INSERT INTO usuarios VALUES ('$nombre','$contraseña','$email', '$telefono')";
         $results = mysqli_query($conn, $consulta);
 
         echo ("Usuario creado <br>");

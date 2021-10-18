@@ -1,6 +1,7 @@
 <?php 
 
     $usu = $_POST["id_usu"];
+    $vehi = $_POST["id_Vehi"];
     $matricula = $_POST["matricula"];
     $marca = $_POST["marca"];
     $modelo = $_POST["modelo"];
@@ -10,13 +11,13 @@
 
     if($inc){
 
-        $consulta = "UPDATE vehiculos SET Matricula = '$matricula',Id_usuario='$usu', Marca='$marca', Modelo='$telefono' WHERE Matricula='$matricula'";
+        $consulta = "UPDATE vehiculos SET Matricula = '$matricula',Id_usuario='$usu', Marca='$marca', Modelo='$modelo' WHERE ID_vehiculo='$vehi'";
         $results = mysqli_query($conn, $consulta);
         
         if($results){
 
             echo ("Datos cambiados con total éxito <br>");
-            echo ("<a href=\"Vehiculos_copy.php?ID_Usuario=$matricula\"><button>Volver</button></a>");
+            echo ("<a href=\"Vehiculos_servicios.php?ID_Usuario=$usu&ID_Vehiculo=$vehi\"><button>Volver</button></a>");
         }
         
         else{

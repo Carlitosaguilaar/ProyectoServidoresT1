@@ -11,13 +11,13 @@
 
     if($inc){
 
-        $consulta = "UPDATE usuarios SET Nombre = '$nombre', Email='$email', Telefono='$modelo' WHERE ID_Usuario='$usu'";
+        $consulta = "UPDATE usuarios SET Nombre = '$nombre', Email='$email', Telefono='$telefono' WHERE ID_Usuario='$usu'";
         $results = mysqli_query($conn, $consulta);
         
         if($results){
 
             echo ("Datos cambiados con total éxito: ".$nombre."<br>");
-            echo ("<a href=\"Vehiculos_copy.php?ID_Usuario=$usu\"><button>Volver</button></a>");
+            echo ("<a href=\"Vehiculos copy.php?ID_Usuario=$usu\"><button>Volver</button></a>");
         }
         
         else{
