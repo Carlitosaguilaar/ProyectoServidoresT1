@@ -95,7 +95,7 @@ if ($inc){
                     if ($results2){
 
                         while ($row = $results2->fetch_array()){
-
+                            $id_vehi = $row['ID_Vehiculo'];
                             $matricula = $row['Matricula'];
                             $marca = $row['Marca'];
                             $modelo = $row['Modelo'];
@@ -112,10 +112,14 @@ if ($inc){
                             <input type="submit" id="marca" name="marca" class="inputs" value="Marca: <?php echo $marca ?>">
     
                             <input type="submit" id="modelo" name="modelo" class="inputs" value="Modelo: <?php echo $modelo ?>">
-                            <input type="hidden" name="id_vehi" value="<?php echo $matricula?>">
+                            <input type="hidden" name="id_vehii" value="<?php echo $id_vehi ?>">
+                            <input type="hidden" name="id_usuu" value="<?php echo $usu ?>">
+                            
+
     
-                            <br>
+                            <hr>
                         </div>
+                    </form>
 
 
 
@@ -126,7 +130,6 @@ if ($inc){
 
                     ?>
 
-                </form>
 
                 
                 <form action="registro_vehiculo.php" method="GET">
