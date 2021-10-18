@@ -11,7 +11,7 @@
 
     if($inc){
 
-        $consulta = "UPDATE usuarios SET Nombre = '$nombre', Email='$email', Telefono='$telefono' WHERE ID_Usuario='$usu'";
+        $consulta = "UPDATE usuarios SET Nombre = '$nombre', Email='$email', Telefono='$modelo' WHERE ID_Usuario='$usu'";
         $results = mysqli_query($conn, $consulta);
         
         if($results){

@@ -2,7 +2,7 @@
 
 $usu = $_GET["ID_Usuario"];
 if (!$usu){
-    echo "esto no va";
+    header("Location:registro_usu.php");
 }
 
 $inc = require "conexion/conexion_database.php";
@@ -39,7 +39,7 @@ if ($inc){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilos/app.css">
+        <link rel="stylesheet" href="app.css">
         
         <title>Lista de Vehículos</title>
     </head>
@@ -88,13 +88,7 @@ if ($inc){
 
                     <div class="contenedor_tablas">
 
-                        <table border="1px">
-
-                            <tr>
-                                <th> Matricula </th>
-                                <th> Marca </th>
-                                <th> Modelo </th>
-                            </tr>
+                        
 
                             <?php 
                             
@@ -106,31 +100,43 @@ if ($inc){
                                     $marca = $row['Marca'];
                                     $modelo = $row['Modelo'];
                                 
-                                
-                            
-                            
-
-                            echo("<tr>
-                                <td> ".$matricula." </td>
-                                <td> ".$marca." </td>
-                                <td> ".$modelo." </td>
-                            </tr>"); 
-
-                            
-                        
-                                } // Llave que cierra el bucle while
-                            } //Llave que cierra el if
                             ?>
 
+
+                            <form action="" method="POST" class="formulario2">
+
+                                            
+                                <input type="submit" id="matricula" name="matricula" class="inputs" value="Mátricula: <?php echo $matricula ?>">
+
+                                <input type="submit" id="marca" name="marca" class="inputs" value="Marca: <?php echo $marca ?>">
+                                
+                                <input type="submit" id="modelo" name="modelo" class="inputs" value="Modelo: <?php echo $modelo ?>">
+
+                                <br>
+
+                                
+                                
+                            <?php 
+
+                                } // Llave que cierra el bucle while
+                            } //Llave que cierra el if
+
+                            ?>
+
+                            </form>
                         </table>
 
                     </div> 
 
                 </div>
+                <form action="registro_vehiculo.php" method="GET">
+                    <input type="submit" value="Añadir vehículo" class="boton">
+                    <input type="hidden" name="ID_Usuario" value="<?php echo $usu ?>">
+                    <input type="hidden" name="Maricula" value="<?php echo $matricula ?>">
+                </form>
+               
                 
-                <input class="boton" type="button" value="Añadir vehículo">
-                
-            </div>
+            </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
         
     </body>
