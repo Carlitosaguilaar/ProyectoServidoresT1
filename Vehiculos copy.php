@@ -129,7 +129,7 @@ if ($inc){
                     </div> 
 
                 </div>
-                <form action="registro_vehiculo.php" method="GET">
+                <form action="registro_vehi.php" method="GET">
                     <input type="submit" value="Añadir vehículo" class="boton">
                     <input type="hidden" name="ID_Usuario" value="<?php echo $usu ?>">
                     <input type="hidden" name="Maricula" value="<?php echo $matricula ?>">
