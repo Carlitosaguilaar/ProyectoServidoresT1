@@ -63,17 +63,17 @@ if ($inc){
     if ($inc){
         $consulta3 = "SELECT * FROM servicios where ID_vehiculo = $vehiculo";
         $results3 = mysqli_query($conn, $consulta3);
-        if ($results3){
-            // while ($row3 = $results3->fetch_array()){
+        // if ($results3){
+        //     while ($row3 = $results3->fetch_array()){
                 
-            //     print_r($row3);
-            //     $id_servicio = $row3['ID_Servicio'];
-            //     $id_vehiculo_fk = $row3['ID_vehiculo'];
-            //     $nombre_servicio= $row3['Nombre'];
-            //     $precio_servicio = $row3['Precio'];
+        //         print_r($row3);
+        //         $id_servicio = $row3['ID_Servicio'];
+        //         $id_vehiculo_fk = $row3['ID_vehiculo'];
+        //         $nombre_servicio= $row3['Nombre'];
+        //         $precio_servicio = $row3['Precio'];
                 
-            // }
-        }
+        //     }
+        // }
     }
 
 ?>
@@ -156,14 +156,15 @@ if ($inc){
     
                             <div class="campo">
     
-                                <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="Nombre del servicio: <?php echo $nombre_servicio ?>">
+                                <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="<?php echo $nombre_servicio ?>">
     
-                                <input type="submit" id="precio_servicio" name="precio_servicio" class="inputs" value="Precio del servicio: <?php echo $precio_servicio ?>">
+                                <input type="submit" id="precio_servicio" name="precio_servicio" class="inputs" value="Precio: <?php echo $precio_servicio ?>">
     
                                 
                                 <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
-                                <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> <!-- Línea nueva agregada -->
+                                <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> 
+                                <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
                                 
                                 
     

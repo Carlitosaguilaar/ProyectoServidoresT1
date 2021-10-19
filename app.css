@@ -22,7 +22,7 @@ body{
 /* Header */
 .headerr{
     border-bottom: 2px solid rgb(71, 71, 71);
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(150, 150, 150);
     padding: 1.1rem;
     margin-bottom: 2rem;
     display: flex;
