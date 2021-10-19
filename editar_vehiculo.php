@@ -17,7 +17,7 @@
         if($results){
 
             echo ("Datos cambiados con total éxito <br>");
-            echo ("<a href=\"Vehiculos_servicios.php?ID_Usuario=$usu&ID_Vehiculo=$vehi\"><button>Volver</button></a>");
+            echo ("<a href=\"web_principales/Vehiculos_servicios.php?ID_Usuario=$usu&ID_Vehiculo=$vehi\"><button>Volver</button></a>");
         }
         
         else{

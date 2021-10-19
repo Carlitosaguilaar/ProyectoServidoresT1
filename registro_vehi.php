@@ -15,17 +15,17 @@
 
         <form method="POST" action="insertar_vehi.php" class="formulario">
         <div class="campo">
-            <label for="matricula">Matricula: <?php echo $matricula?></label>
+            <label for="matricula">Matricula:</label>
             <input type="text" id="matricula" name="matricula" placeholder="Nueva matricula" class="inputs" required>
         </div>
 
         <div class="campo">
-            <label for="marca">Marca: <?php echo $marca?></label>
+            <label for="marca">Marca:</label>
             <input type="tel" id="marca" name="marca"  placeholder="Nueva marca" class="inputs" required>
         </div>
 
         <div class="campo">
-            <label for="modelo">Modelo: <?php echo $modelo?></label>
+            <label for="modelo">Modelo:</label>
             <input type="tel" id="modelo" name="modelo"  placeholder="Nueva modelo" class="inputs" required>
         </div>
             

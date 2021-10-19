@@ -102,7 +102,7 @@ if ($inc){
                 
                 <br>
                 
-                <h3>Listado de Vehículos</h3>
+                <h3>Listado de servicios</h3>
                 
                 <div class="titulo_usu">
 
@@ -118,7 +118,6 @@ if ($inc){
                 
                                     $tipo_servicio = $row['Nombre'];
                                     $fecha = $row['Fecha'];
-                                    $descripcion = $row['Descripcion'];
                                 
                             ?>
 
@@ -129,8 +128,6 @@ if ($inc){
                                 <input type="submit" id="tipo_servicio" name="tipo_servicio" class="inputs" value="Servicio: <?php echo $tipo_servicio ?>">
 
                                 <input type="submit" id="fecha" name="fecha" class="inputs" value="Fecha: <?php echo $fecha ?>">
-                                
-                                <input type="submit" id="descripcion" name="descripcion" class="inputs" value="Descripcion: <?php echo $descripcion ?>">
 
                                 <br>
 

@@ -15,7 +15,7 @@ $modelo = $_POST["modelo"];
         $results = mysqli_query($conn, $consulta);
 
         echo ("vehiculo guardado <br>");
-        echo ("<a href=\"index.php\"><button>Volver</button></a>");
+        echo ("<a href=\"ProyectoServidoresT1/index.php\"><button>Volver</button></a>");
        
     }
 
