@@ -5,6 +5,7 @@
     $precio_servicio = $_GET["precio_servicio"];
     $id_vehiculo = $_GET["id_vehiculo"];
     $id_servicio = $_GET["id_servicio"];
+    $id_usuario = $_GET["id_usu"];
     
 
     $inc = require "conexion_database.php";

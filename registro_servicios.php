@@ -2,6 +2,7 @@
 
     $vehiculo = $_GET["id_vehi"];
     $id_servicio = $_GET["id_servi"];
+    $id_usuario = $_GET["id_usu"];
     require "conexion_database.php";
     
 
@@ -36,6 +37,7 @@
                
                 <input type="hidden" id="id_vehiculo" name="id_vehiculo" value="<?php echo $vehiculo ?>" required>
                 <input type="hidden" id="id_servicio" name="id_servicio" value="<?php echo $id_servicio ?>">
+                <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $id_usuario?>">
     
             </div>
             
