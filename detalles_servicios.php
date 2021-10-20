@@ -1,9 +1,9 @@
 <?php 
     
-    $nombre_usu = $_POST["nombre_usu"];
-    $vehiculo = $_POST["id_vehiculo"];
-    $id_servicio = $_POST["id_servicio"];
-    $nombre_servicio = $_POST["nombre_servicio"];
+    $nombre_usu = $_GET["nombre_usu"];
+    $vehiculo = $_GET["id_vehiculo"];
+    $id_servicio = $_GET["id_servicio"];
+    $nombre_servicio = $_GET["nombre_servicio"];
   
     
     
@@ -121,30 +121,30 @@ if ($inc){
                     ?>
 
                         <div class="contenedor_formulario_servicios">
-                            <form action="editar_detalles_servicios.php" method="POST" class="formulario_3">
+                            <form action="editar_detalles_servicios.php" method="GET" class="formulario_3">
     
                                 <div class="campo">
-                                    <label for="tipo_servicio">Tipo de servicio: <?php echo $tipo_servicio ?></label>
-                                    <input type="text" id="tipo_servicio" name="tipo_servicio" class="inputs">
+                                    <label for="tipo_servicio">Tipo de servicio: </label>
+                                    <input type="text" id="tipo_servicio" name="tipo_servicio" class="inputs" value="<?php echo $tipo_servicio ?>">
                                 </div>
                                 <div class="campo">
                                     <label for="descripcion">Descripción: </label>
                                     <textarea name="descripcion" id="descripcion" cols="30" rows="10"><?php echo $descripcion ?></textarea>
                                 </div>
                                 <div class="campo">
-                                    <label for="fecha">Fecha: <?php echo $fecha ?></label>
-                                    <input type="date" id="fecha" name="fecha" class="inputs">
+                                    <label for="fecha">Fecha: </label>
+                                    <input type="date" id="fecha" name="fecha" class="inputs" value="<?php echo $fecha ?>">
                                 </div>
                                 <div class="campo">
-                                    <label for="precio_servicio">Precio del servicio:  <?php echo $precio_servicio ?></label>
-                                    <input type="number" id="precio_servicio" name="precio_servicio" class="inputs">
+                                    <label for="precio_servicio">Precio del servicio:  </label>
+                                    <input type="number" id="precio_servicio" name="precio_servicio" class="inputs" value="<?php echo $precio_servicio ?>">
                                 </div>
                                 <input type="submit" class="boton" name="submit" id="submit" value="Editar servicios">
                                 
                                 <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
-                                <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> <!-- Línea nueva agregada -->
-                                
+                                <input type="hidden" name="nombre_usu" value="<?php echo $nombre_usu ?>"> <!-- Línea nueva agregada -->
+                                <input type="hidden" name="nombre_servicio" value="<?php echo $nombre_servicio ?>">
                                 
     
     

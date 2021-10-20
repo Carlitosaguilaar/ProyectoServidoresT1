@@ -13,7 +13,7 @@
     <?php require "partials/header.php"?>
     <div class="contenedor_form">
 
-        <form method="POST" action="insertar_usu.php" class="formulario">
+        <form method="GET" action="insertar_usu.php" class="formulario">
             <div class="campo">
                 <label for="nombre">Nombre: </label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" class="inputs" required>

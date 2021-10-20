@@ -1,10 +1,10 @@
 <?php 
 
    
-    $nombre = $_POST["nombre"];
-    $email = $_POST["email"];
-    $telefono = $_POST["telefono"];
-    $contraseña = $_POST["pass"];
+    $nombre = $_GET["nombre"];
+    $email = $_GET["email"];
+    $telefono = $_GET["telefono"];
+    $contraseña = $_GET["pass"];
 
 
     

@@ -1,7 +1,7 @@
 <?php 
     
-    $usu = $_POST["id_usuu"];
-    $vehiculo = $_POST["id_vehii"];
+    $usu = $_GET["id_usuu"];
+    $vehiculo = $_GET["id_vehii"];
     
     
     
@@ -98,26 +98,26 @@ if ($inc){
                 
                 <h1>Información de Vehículo</h1>
 
-                <form method="POST" action="editar_vehiculo.php">
+                <form method="GET" action="editar_vehiculo.php">
                     <div class="campo">
-                        <label for="nombre">Matrícula: <?php echo $matricula?></label>
-                        <input type="text" id="matricula" name="matricula" placeholder="Nueva matrícula" class="inputs" required>
+                        <label for="nombre">Matrícula: </label>
+                        <input type="text" id="matricula" name="matricula" class="inputs" value="<?php echo $matricula?>">
 
                     </div>
 
                     <div class="campo">
-                        <label for="marca">Marca: <?php echo $marca?></label>
-                        <input type="text" id="marca" name="marca"  placeholder="Nueva marca" class="inputs" required>
+                        <label for="marca">Marca: </label>
+                        <input type="text" id="marca" name="marca" class="inputs" value="<?php echo $marca?>">
                     </div>
 
                     <div class="campo">
-                        <label for="modelo">Modelo: <?php echo $modelo?></label>
-                        <input type="text" id="modelo" name="modelo" placeholder="Nuevo modelo" class="inputs" required>
+                        <label for="modelo">Modelo: </label>
+                        <input type="text" id="modelo" name="modelo" class="inputs" value="<?php echo $modelo?>">
 
                     </div>
                     <div class="campo">
-                        <label for="año_fabri">Año de fabricación: <?php echo $año_fabri?></label>
-                        <input type="number" id="año_fabri" name="año_fabri" placeholder="Nueva fecha de fabricación" class="inputs" required>
+                        <label for="año_fabri">Año de fabricación: </label>
+                        <input type="number" id="año_fabri" name="año_fabri" class="inputs" value="<?php echo $año_fabri?>">
 
                     </div>
                     <div class="campo">
@@ -152,13 +152,13 @@ if ($inc){
                     ?>
 
                         <div class="contenedor_formulario_servicios">
-                            <form action="detalles_servicios.php" method="POST" class="formulario_3">
+                            <form action="detalles_servicios.php" method="GET" class="formulario_3">
     
                             <div class="campo">
     
                                 <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="<?php echo $nombre_servicio ?>">
     
-                                <input type="submit" id="precio_servicio" name="precio_servicio" class="inputs" value="Precio: <?php echo $precio_servicio ?>">
+                                <input type="text" id="precio_servicio" name="precio_servicio" class="inputs" readonly value="Precio: <?php echo $precio_servicio ?>">
     
                                 
                                 <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
