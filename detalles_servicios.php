@@ -145,6 +145,7 @@ if ($inc){
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
                                 <input type="hidden" name="nombre_usu" value="<?php echo $nombre_usu ?>"> <!-- Línea nueva agregada -->
                                 <input type="hidden" name="nombre_servicio" value="<?php echo $nombre_servicio ?>">
+                                <input type="hidden" name="id_usu" value="<?php echo $id_usu_fk?>">
                                 
     
     
