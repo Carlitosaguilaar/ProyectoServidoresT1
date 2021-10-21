@@ -1,9 +1,9 @@
 <?php 
 
-    $usu = $_POST["id_usu"];
-    $nombre = $_POST["nombre"];
-    $email = $_POST["email"];
-    $telefono = $_POST["telefono"];
+    $usu = $_GET["id_usu"];
+    $nombre = $_GET["nombre"];
+    $email = $_GET["email"];
+    $telefono = $_GET["telefono"];
 
 
     
@@ -14,7 +14,7 @@
         $results = mysqli_query($conn, $consulta);
         if($results){
             echo ("Datos cambiados con total éxito: ".$nombre."<br>");
-            echo ("<a href=\"Vehiculos_copy.php?ID_Usuario=$usu\"><button>Volver</button></a>");
+            header("Location:Vehiculos_copy.php?ID_Usuario=$usu");
         }
         else{
             echo("Ha ocurrido un error, vuelve a intentarlo");

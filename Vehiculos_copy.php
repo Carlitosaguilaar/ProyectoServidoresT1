@@ -52,7 +52,7 @@ if ($inc){
                 
                 <h1>Lista de Vehículos</h1>
 
-                <form method="POST" action="editar_usuario.php">
+                <form method="GET" action="editar_usuario.php">
                     <div class="campo">
                         <label for="nombre">Nombre: <?php echo $nombre?></label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" class="inputs" required>

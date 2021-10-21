@@ -158,8 +158,8 @@ if ($inc){
     
                                 <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="<?php echo $nombre_servicio ?>">
     
-                                <input type="submit" id="precio_servicio" name="precio_servicio" class="inputs" value="Precio: <?php echo $precio_servicio ?>">
-    
+                                <input type="text" id="precio_servicio" name="precio_servicio" class="inputs" value="Precio: <?php echo $precio_servicio ?>" readonly>
+
                                 
                                 <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
