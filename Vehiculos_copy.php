@@ -54,24 +54,24 @@ if ($inc){
 
                 <form method="GET" action="editar_usuario.php">
                     <div class="campo">
-                        <label for="nombre">Nombre: <?php echo $nombre?></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" class="inputs" required>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="nombre" class="inputs" value="<?php echo $nombre?>">
 
                     </div>
 
                     <div class="campo">
-                        <label for="email">Email: <?php echo $email?></label>
-                        <input type="tel" id="email" name="email"  placeholder="Nuevo Email" class="inputs" required>
+                        <label for="email">Email: </label>
+                        <input type="tel" id="email" name="email" class="inputs" value="<?php echo $email?>">
                     </div>
 
                     <div class="campo">
-                        <label for="telefono">Telefono: <?php echo $telefono?></label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Nuevo teléfono" class="inputs" required>
+                        <label for="telefono">Telefono: </label>
+                        <input type="tel" id="telefono" name="telefono" class="inputs" value="<?php echo $telefono?>">
 
                     </div>
                     <div class="campo">
 
-                        <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $usu ?>" class="inputs" required>
+                        <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $usu ?>" class="inputs">
 
                     </div>
                     
@@ -103,7 +103,7 @@ if ($inc){
                     ?>
 
 
-                    <form action="lista_servicios.php" method="POST" class="formulario2" >
+                    <form action="lista_servicios.php" method="GET" class="formulario2" >
 
                         <div class="campo">
 
