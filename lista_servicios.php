@@ -93,9 +93,9 @@ if ($inc){
 <body>
     <?php require "partials/header.php" ?>
     <div class="contenedor_form">
-        <h1>Usuario: <?php echo $nombre ?></h1>
+        
             <div class="formulario">    
-                
+                <h1>Usuario: <span><?php echo $nombre ?></span></h1>
                 <h1>Información de Vehículo</h1>
 
                 <form method="GET" action="editar_vehiculo.php">
@@ -168,8 +168,8 @@ if ($inc){
                                 
     
     
-                                <hr>
                             </div>
+                            <hr>
                             </form>
 
                         </div>

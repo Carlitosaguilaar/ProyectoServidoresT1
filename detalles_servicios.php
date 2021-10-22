@@ -51,9 +51,9 @@ if ($inc){
 <body>
     <?php require "partials/header.php" ?>
     <div class="contenedor_form">
-        <h1>Usuario: <?php echo $nombre_usu ?></h1>
-            <div class="formulario">    
-                
+        
+            <div class="formulario formulario_3">    
+                <h1>Usuario: <span><?php echo $nombre_usu ?></span></h1>
                 <h1>Información de Vehículo</h1>
 
                 <table border="1">
@@ -99,7 +99,7 @@ if ($inc){
 
                 
                 <br>
-                <h1><?php  echo $nombre_servicio ?></h1>
+                <h1> <span><?php  echo $nombre_servicio ?></span></h1>
                 <h3>Detalles del servicio</h3>
                 
                     <?php 
@@ -129,7 +129,7 @@ if ($inc){
                                 </div>
                                 <div class="campo">
                                     <label for="descripcion">Descripción: </label>
-                                    <textarea name="descripcion" id="descripcion" cols="30" rows="10"><?php echo $descripcion ?></textarea>
+                                    <textarea name="descripcion" class="inputs" id="descripcion" cols="30" rows="10"><?php echo $descripcion ?></textarea>
                                 </div>
                                 <div class="campo">
                                     <label for="fecha">Fecha: </label>

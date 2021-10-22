@@ -50,7 +50,7 @@ if ($inc){
         <div class="contenedor_form">
             <div class="formulario">    
                 
-                <h1>Datos del usuario</h1>
+                <h1 class="ttilte">Datos del usuario</h1>
 
                 <form method="GET" action="editar_usuario.php">
                     <div class="campo">
@@ -84,12 +84,6 @@ if ($inc){
                 
                 <h3>Listado de Vehículos</h3>
                 
-               
-
-                  
-
-                        
-
                     <?php 
 
                     if ($results2){
@@ -117,8 +111,9 @@ if ($inc){
                             
 
     
-                            <hr>
+                            
                         </div>
+                        <hr>
                     </form>
 
 
