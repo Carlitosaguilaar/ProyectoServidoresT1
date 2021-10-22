@@ -6,6 +6,8 @@
     $id_vehiculo = $_GET["id_vehiculo"];
     $id_servicio = $_GET["id_servicio"];
     $id_usuario = $_GET["id_usu"];
+    $fecha = $_GET["fecha"];
+    $matricula = $_GET["matricula"]; //no hace falta
     
 
     $inc = require "conexion_database.php";
@@ -23,8 +25,8 @@
 
         echo "Connected hecha :D.";
 
-        $consulta = "INSERT INTO servicios (ID_vehiculo, Nombre, Precio)
-        VALUES ('$id_vehiculo','$nombre_servicio', '$precio_servicio')";
+        $consulta = "INSERT INTO servicios (ID_vehiculo, Nombre, fecha)
+        VALUES ('$id_vehiculo','$nombre_servicio', '$fecha')";
 
         $results = mysqli_query($conn, $consulta);
 
@@ -35,7 +37,7 @@
         //$users = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
         echo ("<script>alert(\"Servicio creado con éxito\")</script>");
-        header("Location:lista_servicios.php");
+        header("Location:lista_servicios.php?id_vehii=$id_vehiculo&id_usuu=$id_usuario");
         //acción
         }
     

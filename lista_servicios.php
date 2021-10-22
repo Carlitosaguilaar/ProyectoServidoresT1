@@ -147,6 +147,7 @@ if ($inc){
                             $id_vehiculo_fk = $row3['ID_vehiculo'];
                             $nombre_servicio= $row3['Nombre'];
                             $precio_servicio = $row3['Precio'];
+                            $fecha = $row3['fecha'];
                             
 
                     ?>
@@ -158,7 +159,7 @@ if ($inc){
     
                                 <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="<?php echo $nombre_servicio ?>">
 
-                                <input type="text" id="precio_servicio" name="precio_servicio" class="inputs" value="Precio: <?php echo $precio_servicio ?>" readonly>
+                                <input type="date" id="fecha" name="fecha" class="inputs" value="<?php echo $fecha ?>" readonly>
                                 <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
                                 <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> 
@@ -189,6 +190,9 @@ if ($inc){
                     <input type="hidden" name="id_servi" value="<?php echo $id_servicio ?>">
                     <input type="hidden" name="id_vehi" value="<?php echo $id_vehii ?>">
                     <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
+                    <input type="hidden" name="matricula" value="<?php echo $matricula ?>">
+
+                    
                 </form>
                
                 

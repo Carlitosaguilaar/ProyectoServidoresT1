@@ -50,23 +50,23 @@ if ($inc){
         <div class="contenedor_form">
             <div class="formulario">    
                 
-                <h1>Lista de Vehículos</h1>
+                <h1>Datos del usuario</h1>
 
                 <form method="GET" action="editar_usuario.php">
                     <div class="campo">
                         <label for="nombre">Nombre: </label>
-                        <input type="text" id="nombre" name="nombre" class="inputs" value="<?php echo $nombre?>">
+                        <input type="text" id="nombre" name="nombre" autocomplete="off" class="inputs" value="<?php echo $nombre?>">
 
                     </div>
 
                     <div class="campo">
                         <label for="email">Email: </label>
-                        <input type="tel" id="email" name="email" class="inputs" value="<?php echo $email?>">
+                        <input type="tel" id="email" name="email" autocomplete="off" class="inputs" value="<?php echo $email?>">
                     </div>
 
                     <div class="campo">
                         <label for="telefono">Telefono: </label>
-                        <input type="tel" id="telefono" name="telefono" class="inputs" value="<?php echo $telefono?>">
+                        <input type="tel" id="telefono" name="telefono" autocomplete="off" class="inputs" value="<?php echo $telefono?>">
 
                     </div>
                     <div class="campo">

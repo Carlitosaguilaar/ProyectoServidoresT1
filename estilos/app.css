@@ -7,9 +7,9 @@ html{
     box-sizing: inherit;
 }
 body{
-    background: #acb6e5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url("imagenes/ford.jpg");
+    background-repeat: no-repeat;
+
     margin: 0;
     padding: 0;
     font-family: 'Prompt', sans-serif;
@@ -21,12 +21,17 @@ body{
 
 /* Header */
 .headerr{
-    border-bottom: 2px solid rgb(71, 71, 71);
+
     background-color: rgb(150, 150, 150);
     padding: 1.1rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-evenly;
+    clip-path: polygon(12% 100%, 88% 100%, 100% 0, 0 0);
+    width: 80%;
+    margin: 0 auto;
+    background-color: #01285a6e;
+    
 
 
 }
@@ -60,18 +65,33 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 70vh;
 }
 .formulario{
-    background-color: white;
     padding: 2rem;
     width: 40%;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    background: #B2FEFA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 0 0 10px black;
+    box-shadow: 0px 0px 10px black;
+    
+}
+.contenedor_form_login{
+   
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 70vh;
+    margin-right: 4rem;
+
+}
+.formulario_login{
+    padding: 2rem;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px black;
+   
+   
 }
 .login_titulo{
     text-align: center;
@@ -88,6 +108,7 @@ body{
     font-size: 1.2rem;
     width: 100%;
     box-shadow: 0px 2px 2px black;
+    
 }
 .formulario2 .inputs{
     padding: 1rem;
