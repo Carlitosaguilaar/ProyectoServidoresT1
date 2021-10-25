@@ -1,3 +1,11 @@
+:root{
+    --primario: #F20707;
+    --secundario: #730202;
+    --negro: #0D0D0D;
+    --blanco: #FFFFFF;
+    --gris: #E1E1E1;
+}
+
 html{
     box-sizing: border-box;
     font-family: 'Prompt', sans-serif;
@@ -7,25 +15,41 @@ html{
     box-sizing: inherit;
 }
 body{
-    background: #acb6e5;  /* fallback for old browsers */
-    background-image: "01.jpg";
+    background-image: url("estilos/imagenes/fondonegro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     font-family: 'Prompt', sans-serif;
+    overflow-x: hidden;
     
     
     
     
 }
+.contenedor_general_login{
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+
 
 /* Header */
 .headerr{
-    border-bottom: 2px solid rgb(71, 71, 71);
-    background-color: rgb(155, 155, 155);
+
+    background-color: rgb(150, 150, 150);
     padding: 1.1rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-evenly;
+    clip-path: polygon(12% 100%, 88% 100%, 100% 0, 0 0);
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--gris);
+    
 
 
 }
@@ -40,6 +64,7 @@ body{
     font-weight: bold;
 
 }
+
 .navegador{
     display: flex;
     align-items: center;
@@ -59,55 +84,140 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+   margin-top: 2rem;
+    
+    
 }
 .formulario{
-    background-color: white;
     padding: 2rem;
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    background: #B2FEFA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 0 0 10px black;
+    box-shadow: 0px 0px 10px var(--gris);
+    
+}
+
+.formulario h1{
+    margin-top: 0;
+    color: var(--blanco);
+}
+.formulario h3{
+    color: var(--gris);
+}
+/*FORMULARIO DEL INDEX.PHP DONDE ESTÁ EL LOGIN */
+.contenedor_form_login{
+   
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 4rem;
+    margin-top: 2rem;
+   
+    
+ 
+    
+    
+    
+
+}
+.formulario_login{
+    padding: 2rem;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px var(--gris);
+    position: absolute;
+    top: 250px;
+    left: 200px;
+  
+
+   
+     
+   
+   
+}
+
+.formulario_login p{
+    color: var(--gris);
+    font-size: 1.5rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+.formulario_login a{
+    color: var(--primario)
 }
 .login_titulo{
     text-align: center;
     margin-top: 0;
+    color: var(--gris);
+    font-size: 2rem;
+    text-transform: uppercase;
 }
+
+/*ESTILOS A LOS CAMPOS DE LOS DISTINTOS FORMULARIOS */
 .campo{
     margin-bottom: 1rem;
+    display: flex;
 }
 .inputs{
     padding: 1rem;
-    border-radius: 10px;
-    border: 1px solid rgb(175, 175, 175);
+    
+    border: 2px solid var(--secundario);
     outline: none;
     font-size: 1.2rem;
     width: 100%;
-    box-shadow: 0px 2px 2px black;
+    box-shadow: 0px 2px 2px var(--negro);
+    
 }
+
 .formulario2 .inputs{
-    padding: 1rem;
-    border-radius: 10px;
-    border: 1px solid rgb(175, 175, 175);
+    padding: .8rem;
+   
+    border: 2px solid var(--negro);
     outline: none;
     font-size: 1rem;
     width: 32%;
-    box-shadow: 0px 2px 2px black;
     cursor: pointer;
+    margin-right: 1rem;
+    background-color: var(--secundario);
+    color: var(--gris);
+
 }
+.formulario_3{
+    width: 60%;
+}
+.formulario_3 .inputs{
+    padding: 1rem;
+    
+    border: 2px solid var(--negro);
+    outline: none;
+    
+    width: 60%;
+    box-shadow: 0px 2px 2px var(--negro);
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: var(--secundario);
+    color: var(--gris);
+
+}
+
+textarea{
+    resize: none;
+}
+span{
+    color: var(--primario);
+}
+
 .boton{
     border: none;
     padding: .8rem 2rem;
     margin-top: 2rem;
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(255, 174, 0);
+   
+    background-color: var(--primario);
     box-shadow: 0px 0px 2px black;
-    color: rgb(41, 41, 41);
+    color: var(--blanco);
     text-transform: uppercase;
     font-family: 'Prompt', sans-serif;
     
@@ -125,6 +235,10 @@ body{
 }
 label{
     display: block;
+    font-weight: bold;
+    flex-basis: 10rem;
+    align-self: center;
+    color: var(--gris);
 }
 
 
@@ -146,6 +260,20 @@ label{
 .contenedor_tablas h3{
     flex-basis: 30rem;
 }
-.centrado{
-    background-color: red;
+
+/* Estilos a la tabla de detalles servicios */
+.formulario table{
+    color: var(--secundario);
+    text-align: center;
+    border: 2px solid var(--gris);
+}
+.formulario table th{
+    color: var(--blanco);
+    font-size: 1.5;
+    padding: 1rem;
+}
+.formulario table td{
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 1rem;
 }

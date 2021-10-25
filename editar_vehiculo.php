@@ -1,11 +1,11 @@
 <?php 
 
-    $usu = $_POST["id_usu"];
-    $matricula = $_POST["matricula"];
-    $marca = $_POST["marca"];
-    $modelo = $_POST["modelo"];
-    $año_fabri = $_POST["año_fabri"];
-    $id_vehi = $_POST["id_vehi"];
+    $usu = $_GET["id_usu"];
+    $matricula = $_GET["matricula"];
+    $marca = $_GET["marca"];
+    $modelo = $_GET["modelo"];
+    $año_fabri = $_GET["año_fabri"];
+    $id_vehi = $_GET["id_vehi"];
     print_r($id_vehi);
 
 

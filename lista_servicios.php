@@ -1,7 +1,7 @@
 <?php 
     
-    $usu = $_POST["id_usuu"];
-    $vehiculo = $_POST["id_vehii"];
+    $usu = $_GET["id_usuu"];
+    $vehiculo = $_GET["id_vehii"];
     
     
     
@@ -23,6 +23,7 @@
                 $nombre = $row['Nombre'];
                 $email = $row['Email'];
                 $telefono = $row['Telefono'];
+                $id_usu = $row['ID_Usuario'];
             }
         }
     }
@@ -60,18 +61,19 @@ if ($inc){
     //consulta 3
 
     if ($inc){
-        $consulta3 = "SELECT * FROM servicios where ID_vehiculo = '$vehiculo'";
+        $consulta3 = "SELECT * FROM servicios where ID_vehiculo = $vehiculo";
         $results3 = mysqli_query($conn, $consulta3);
-        if ($results3){
-            while ($row3 = $results3->fetch_array()){
-
-                $id_servicio = $row3['ID_Servicio'];
-                $id_vehiculo_fk = $row3['ID_vehiculo'];
-                $nombre_servicio= $row3['Nombre'];
-                $precio_servicio = $row3['Precio'];
+        // if ($results3){
+        //     while ($row3 = $results3->fetch_array()){
                 
-            }
-        }
+        //         print_r($row3);
+        //         $id_servicio = $row3['ID_Servicio'];
+        //         $id_vehiculo_fk = $row3['ID_vehiculo'];
+        //         $nombre_servicio= $row3['Nombre'];
+        //         $precio_servicio = $row3['Precio'];
+                
+        //     }
+        // }
     }
 
 ?>
@@ -91,31 +93,31 @@ if ($inc){
 <body>
     <?php require "partials/header.php" ?>
     <div class="contenedor_form">
-        <h1>Usuario: <?php echo $nombre ?></h1>
+        
             <div class="formulario">    
-                
-                <h1>Lista de Vehículos</h1>
+                <h1>Usuario: <span><?php echo $nombre ?></span></h1>
+                <h1>Información de Vehículo</h1>
 
-                <form method="POST" action="editar_vehiculo.php">
+                <form method="GET" action="editar_vehiculo.php">
                     <div class="campo">
-                        <label for="nombre">Matrícula: <?php echo $matricula?></label>
-                        <input type="text" id="matricula" name="matricula" placeholder="Nueva matrícula" class="inputs" required>
+                        <label for="nombre">Matrícula: </label>
+                        <input type="text" id="matricula" name="matricula" class="inputs" value="<?php echo $matricula?>">
 
                     </div>
 
                     <div class="campo">
-                        <label for="marca">Marca: <?php echo $marca?></label>
-                        <input type="text" id="marca" name="marca"  placeholder="Nueva marca" class="inputs" required>
+                        <label for="marca">Marca: </label>
+                        <input type="text" id="marca" name="marca" class="inputs" value="<?php echo $marca?>">
                     </div>
 
                     <div class="campo">
-                        <label for="modelo">Modelo: <?php echo $modelo?></label>
-                        <input type="text" id="modelo" name="modelo" placeholder="Nuevo modelo" class="inputs" required>
+                        <label for="modelo">Modelo: </label>
+                        <input type="text" id="modelo" name="modelo" class="inputs" value="<?php echo $modelo?>">
 
                     </div>
                     <div class="campo">
-                        <label for="año_fabri">Año de fabricación: <?php echo $año_fabri?></label>
-                        <input type="number" id="año_fabri" name="año_fabri" placeholder="Nueva fecha de fabricación" class="inputs" required>
+                        <label for="año_fabri">Año de fabricación: </label>
+                        <input type="number" id="año_fabri" name="año_fabri" class="inputs" value="<?php echo $año_fabri?>">
 
                     </div>
                     <div class="campo">
@@ -138,34 +140,40 @@ if ($inc){
                     <?php 
 
                     if ($results3){
-
+                    
                         while ($row3 = $results3->fetch_array()){
+                            
                             $id_servicio = $row3['ID_Servicio'];
                             $id_vehiculo_fk = $row3['ID_vehiculo'];
                             $nombre_servicio= $row3['Nombre'];
                             $precio_servicio = $row3['Precio'];
+                            $fecha = $row3['fecha'];
                             
 
                     ?>
 
+                        <div class="contenedor_formulario_servicios">
+                            <form action="detalles_servicios.php" method="GET" class="formulario_3">
+    
+                            <div class="campo">
+    
+                                <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="<?php echo $nombre_servicio ?>">
 
-                        <form action="detalles_servicios.php" method="POST" class="formulario2" >
-
-                        <div class="campo">
-
-                            <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="Nombre del servicio: <?php echo $nombre_servicio ?>">
-
-                            <input type="submit" id="precio_servicio" name="precio_servicio" class="inputs" value="Precio del servicio: <?php echo $precio_servicio ?>">
-
-                            
-                            <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
-                            <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
-                            
-
-
+                                <input type="date" id="fecha" name="fecha" class="inputs" value="<?php echo $fecha ?>" readonly>
+                                <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
+                                <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
+                                <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> 
+                                <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
+                                
+                                
+    
+    
+                            </div>
                             <hr>
+                            </form>
+
                         </div>
-                        </form>
+
 
 
                     <?php 
@@ -181,6 +189,10 @@ if ($inc){
                     <input type="submit" value="Añadir servicio" class="boton">
                     <input type="hidden" name="id_servi" value="<?php echo $id_servicio ?>">
                     <input type="hidden" name="id_vehi" value="<?php echo $id_vehii ?>">
+                    <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
+                    <input type="hidden" name="matricula" value="<?php echo $matricula ?>">
+
+                    
                 </form>
                
                 

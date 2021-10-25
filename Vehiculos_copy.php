@@ -50,28 +50,28 @@ if ($inc){
         <div class="contenedor_form">
             <div class="formulario">    
                 
-                <h1>Lista de Vehículos</h1>
+                <h1 class="ttilte">Datos del usuario</h1>
 
-                <form method="POST" action="editar_usuario.php">
+                <form method="GET" action="editar_usuario.php">
                     <div class="campo">
-                        <label for="nombre">Nombre: <?php echo $nombre?></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" class="inputs" required>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="off" class="inputs" value="<?php echo $nombre?>">
 
                     </div>
 
                     <div class="campo">
-                        <label for="email">Email: <?php echo $email?></label>
-                        <input type="tel" id="email" name="email"  placeholder="Nuevo Email" class="inputs" required>
+                        <label for="email">Email: </label>
+                        <input type="tel" id="email" name="email" autocomplete="off" class="inputs" value="<?php echo $email?>">
                     </div>
 
                     <div class="campo">
-                        <label for="telefono">Telefono: <?php echo $telefono?></label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Nuevo teléfono" class="inputs" required>
+                        <label for="telefono">Telefono: </label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="off" class="inputs" value="<?php echo $telefono?>">
 
                     </div>
                     <div class="campo">
 
-                        <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $usu ?>" class="inputs" required>
+                        <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $usu ?>" class="inputs">
 
                     </div>
                     
@@ -84,12 +84,6 @@ if ($inc){
                 
                 <h3>Listado de Vehículos</h3>
                 
-               
-
-                  
-
-                        
-
                     <?php 
 
                     if ($results2){
@@ -103,11 +97,11 @@ if ($inc){
                     ?>
 
 
-                    <form action="lista_servicios.php" method="POST" class="formulario2" >
+                    <form action="lista_servicios.php" method="GET" class="formulario2" >
 
                         <div class="campo">
 
-                            <input type="submit" id="matricula" name="matricula" class="inputs" value="Matrícula: <?php echo $matricula ?>">
+                            <input type="submit" id="matricula" name="matricula" class="inputs" value="Mátricula: <?php echo $matricula ?>">
     
                             <input type="submit" id="marca" name="marca" class="inputs" value="Marca: <?php echo $marca ?>">
     
@@ -117,8 +111,9 @@ if ($inc){
                             
 
     
-                            <hr>
+                            
                         </div>
+                        <hr>
                     </form>
 
 

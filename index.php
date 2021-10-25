@@ -18,22 +18,28 @@
 
 </head>
 <body>
-    <?php require "partials/header.php" ?>
-    <div class="contenedor_form">
+    
+   <div class="contenedor_general_login">
 
-        <form action="login.php" class="formulario" method="POST">
-                <h2 class="login_titulo">Login</h2>
-                <div class="campo">
-                    <input type="text" name="nombre" class="inputs" placeholder="Nombre">
-                </div>
-                <div class="campo">
-                    <input type="password" name="password" class="inputs" placeholder="Contraseña">
-                </div>
-                <a href="registro_usu.php">Nuevo aquí? Regístrate</a>
-                <input type="submit" value="Registro" class="boton">
-                
-            </form>
-    </div>
+       <video autoplay muted loop preload="TRUE">
+           <source src="estilos/imagenes/video.mp4">
+       </video>
+       <div class="contenedor_form_login">
+   
+           <form action="login.php" class="formulario_login" method="POST">
+                   <h2 class="login_titulo">Login</h2>
+                   <div class="campo">
+                       <input type="text" name="nombre" class="inputs" placeholder="Nombre" autocomplete="off">
+                   </div>
+                   <div class="campo">
+                       <input type="password" name="password" class="inputs" placeholder="Contraseña">
+                   </div>
+                   <p>Nuevo aquí? <a href="registro_usu.php">Regístrate</a></p>
+                   <input type="submit" value="Registro" class="boton">
+                   
+               </form>
+       </div>
+   </div>
 
 
 </body>
