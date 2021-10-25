@@ -21,25 +21,15 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Prompt', sans-serif;
-    overflow-x: hidden;
-    
-    
-    
-    
+    overflow-x: hidden;  
 }
 .contenedor_general_login{
     height: 100vh;
     overflow: hidden;
 }
 
-
-
-
-
-
 /* Header */
 .headerr{
-
     background-color: rgb(150, 150, 150);
     padding: 1.1rem;
     margin-bottom: 2rem;
@@ -49,9 +39,6 @@ body{
     width: 80%;
     margin: 0 auto;
     background-color: var(--gris);
-    
-
-
 }
 .headerr a{
     text-decoration: none;
@@ -62,9 +49,7 @@ body{
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: bold;
-
 }
-
 .navegador{
     display: flex;
     align-items: center;
@@ -85,8 +70,6 @@ body{
     justify-content: center;
     flex-direction: column;
    margin-top: 2rem;
-    
-    
 }
 .formulario{
     padding: 2rem;
@@ -94,9 +77,7 @@ body{
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 10px var(--gris);
-    
 }
-
 .formulario h1{
     margin-top: 0;
     color: var(--blanco);
@@ -106,14 +87,11 @@ body{
 }
 /*FORMULARIO DEL INDEX.PHP DONDE ESTÁ EL LOGIN */
 .contenedor_form_login{
-   
     display: flex;
     align-items: center;
     justify-content: right;
     margin-right: 4rem;
     margin-top: 2rem;
-   
-    
 }
 .formulario_login{
     padding: 2rem;
@@ -124,10 +102,7 @@ body{
     position: absolute;
     top: 250px;
     left: 200px;
-  
- 
 }
-
 .formulario_login p{
     color: var(--gris);
     font-size: 1.5rem;
@@ -152,18 +127,15 @@ body{
 }
 .inputs{
     padding: 1rem;
-    
     border: 2px solid var(--secundario);
     outline: none;
     font-size: 1.2rem;
     width: 100%;
     box-shadow: 0px 2px 2px var(--negro);
-    
 }
 
 .formulario2 .inputs{
-    padding: .8rem;
-   
+    padding: .8rem;   
     border: 2px solid var(--negro);
     outline: none;
     font-size: 1rem;
@@ -172,47 +144,35 @@ body{
     margin-right: 1rem;
     background-color: var(--secundario);
     color: var(--gris);
-
-}
-.formulario_3{
-    width: 60%;
 }
 .formulario_3 .inputs{
     padding: 1rem;
-    
     border: 2px solid var(--negro);
     outline: none;
-    
     width: 60%;
     box-shadow: 0px 2px 2px var(--negro);
     cursor: pointer;
     margin: 0 auto;
     background-color: var(--secundario);
     color: var(--gris);
-
 }
-
 textarea{
     resize: none;
 }
 span{
     color: var(--primario);
 }
-
 .boton{
     border: none;
     padding: .8rem 2rem;
     margin-top: 2rem;
     font-size: 1.2rem;
     cursor: pointer;
-   
     background-color: var(--primario);
     box-shadow: 0px 0px 2px black;
     color: var(--blanco);
     text-transform: uppercase;
     font-family: 'Prompt', sans-serif;
-    
-    
 }
 .info{
     text-align: center;
@@ -232,26 +192,21 @@ label{
     color: var(--gris);
 }
 
-
 /* Estilos al usuario */
 .titulo_usu{
-    padding: 1rem;
-    
+    padding: 1rem; 
 }
 .titulo_usu table{
     border: 3px solid green;
-
 }
 .contenedor_tablas{
-    display: flex;
-    
+    display: flex;    
     width: 80%;
     justify-content: space-evenly;
 }
 .contenedor_tablas h3{
     flex-basis: 30rem;
 }
-
 /* Estilos a la tabla de detalles servicios */
 .formulario table{
     color: var(--secundario);
