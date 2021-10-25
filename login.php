@@ -1,5 +1,5 @@
 <?php 
-
+    session_start();
     $nombre = $_POST["nombre"];
     $contraseñaBBDD= "";
     $password = $_POST["password"];
@@ -32,10 +32,10 @@
 
 ?>
 <?php 
-        if ($password == $contraseñaBBDD){
+    if ($password == $contraseñaBBDD){
 
-            
-        
+        session_start();   
+        $_SESSION['username']=$nombre;
         header("Location:Vehiculos_copy.php?ID_Usuario=$usu");
     }
     else{

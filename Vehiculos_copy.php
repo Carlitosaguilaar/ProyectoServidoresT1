@@ -51,6 +51,9 @@ if ($inc){
             <div class="formulario">    
                 
                 <h1 class="ttilte">Datos del usuario</h1>
+                
+               
+                
 
                 <form method="GET" action="editar_usuario.php">
                     <div class="campo">
