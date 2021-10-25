@@ -35,7 +35,7 @@
                        <input type="password" name="password" class="inputs" placeholder="Contraseña">
                    </div>
                    <p>Nuevo aquí? <a href="registro_usu.php">Regístrate</a></p>
-                   <input type="submit" value="Registro" class="boton">
+                   <input type="submit" value="Iniciar sesion" class="boton">
                    
                </form>
        </div>
