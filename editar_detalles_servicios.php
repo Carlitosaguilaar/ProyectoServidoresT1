@@ -11,7 +11,6 @@
     $nombre_servicio = $_GET["nombre_servicio"];
 
 
-
     $inc = require "conexion_database.php";
     if($inc){
 

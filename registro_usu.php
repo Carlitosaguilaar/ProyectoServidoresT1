@@ -17,7 +17,6 @@
             <div class="campo">
                 <label for="nombre">Nombre: </label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre" class="inputs" required>
-    
             </div>
     
             <div class="campo">
@@ -28,12 +27,10 @@
             <div class="campo">
                 <label for="telefono">Telefono: </label>
                 <input type="tel" id="telefono" name="telefono" placeholder="Nuevo teléfono" class="inputs" required>
-    
             </div>
             <div class="campo">
                 <label for="telefono">Contraseña: </label>
                 <input type="password" id="pass" name="pass" placeholder="Contraseña" class="inputs" required>
-    
             </div>
             
             <!-- <div class="campo">
@@ -41,9 +38,6 @@
                 <input type="text" id="id_usu" name="id_usu" placeholder="ID usuario" class="inputs" required>
     
             </div> -->
-    
-            
-    
             <input type="submit" class="boton" name="submit" value="Crear usuario" class="inputs">
         </form>
     </div>

@@ -5,14 +5,9 @@
     $id_servicio = $_GET["id_servicio"];
     $nombre_servicio = $_GET["nombre_servicio"];
   
-    
-    
     $inc = require "conexion_database.php";
     //CONSULTA 1
   
-    
-
-
 ?>
 <?php 
 //CONSULTA 2
@@ -20,11 +15,7 @@
 if ($inc){
     
     $consulta2 = "SELECT * FROM vehiculos where ID_Vehiculo = '$vehiculo'";
-    $results2 = mysqli_query($conn, $consulta2);
-
-    
-    
-    
+    $results2 = mysqli_query($conn, $consulta2);   
 }
 ?>
 
@@ -35,7 +26,6 @@ if ($inc){
         $consulta3 = "SELECT * FROM servicios where ID_vehiculo = $vehiculo AND ID_Servicio = $id_servicio";
         $results3 = mysqli_query($conn, $consulta3);
     }
-
 ?>
 
 
@@ -116,8 +106,6 @@ if ($inc){
                             $descripcion = $row3['descripcion'];
                             $fecha = $row3['fecha'];
 
-                            
-
                     ?>
 
                         <div class="contenedor_formulario_servicios">
@@ -155,23 +143,15 @@ if ($inc){
 
                         </div>
 
-
-
                     <?php 
 
                         } // Llave que cierra el bucle while
                     } //Llave que cierra el if
 
                 ?>
-
-
-                
-        
-               
-                
+            
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-
 
 </body>
 </html>

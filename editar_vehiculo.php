@@ -9,7 +9,6 @@
     print_r($id_vehi);
 
 
-    
     $inc = require "conexion_database.php";
     if($inc){
 

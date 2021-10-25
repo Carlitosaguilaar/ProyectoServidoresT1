@@ -4,9 +4,7 @@
     $nombre = $_GET["nombre"];
     $email = $_GET["email"];
     $telefono = $_GET["telefono"];
-
-
-    
+  
     $inc = require "conexion_database.php";
     if($inc){
 

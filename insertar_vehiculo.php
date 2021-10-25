@@ -7,8 +7,6 @@
     $año_fabri = $_GET["año_fabri"];
     $usuu = $_GET["id_usu"];
     
-
-
     
     $inc = require "conexion_database.php";
     if($inc){
