@@ -9,6 +9,8 @@ $inc = require "conexion_database.php";
 
 if ($inc){
 
+
+
     $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
     $results = mysqli_query($conn, $consulta);
 
