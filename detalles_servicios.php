@@ -179,7 +179,7 @@ if ($inc){
                 
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-
+        <?php require "partials/footer.php" ?>
 
 </body>
 </html>

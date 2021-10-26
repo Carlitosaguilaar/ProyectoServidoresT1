@@ -67,5 +67,6 @@
             <input type="submit" class="boton" name="submit" value="Añadir Vehículo" class="inputs">
         </form>
     </div>
+    <?php require "partials/footer.php" ?>
 </body>
 </html>

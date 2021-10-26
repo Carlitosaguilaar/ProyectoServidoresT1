@@ -68,18 +68,20 @@ body{
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: bold;
+
 }
 .footer{
     background-color: rgb(150, 150, 150);
     padding: 1.5rem;
     display: flex;
+    text-align: center;
     justify-content: space-evenly;
     clip-path: polygon(12% 0, 88% 0, 100% 100%, 0 100%);
     width: 80%;
     margin: 0 auto;
     margin-top: 4rem;
     background-color: var(--gris);
-    position: absolute; bottom: 0; left: 10%;
+    justify-content: flex-end;
 }
 
 /* Esto es un comentario*/

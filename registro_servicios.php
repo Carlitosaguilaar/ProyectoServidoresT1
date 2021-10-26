@@ -57,5 +57,6 @@
             <input type="submit" class="boton" name="submit" value="Registrar servicio" class="inputs">
         </form>
     </div>
+    <?php require "partials/footer.php" ?>
 </body>
 </html>
