@@ -10,7 +10,8 @@
 </head>
 <body>
 
-    <?php require "partials/header.php"?>
+    <?php require "partials/header.php" ?>
+
     <div class="contenedor_form">
 
         <form method="GET" action="insertar_usu.php" class="formulario">
@@ -41,5 +42,6 @@
             <input type="submit" class="boton" name="submit" value="Crear usuario" class="inputs">
         </form>
     </div>
+    <?php require "partials/footer.php" ?>
 </body>
 </html>

@@ -35,6 +35,7 @@
         else{
             require "index.php";
             echo ("<script type=\"text/javascript\">alert(\"Usuario o Contraseña Incorrectos\");</script>"); 
+            
         }
     ?>
 </body>

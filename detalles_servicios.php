@@ -39,7 +39,8 @@ if ($inc){
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <?php require "partials/header.php" ?>
+        <?php require "partials/header.php" ?> 
+
     <div class="contenedor_form">
         
             <div class="formulario formulario_3">    
@@ -152,6 +153,6 @@ if ($inc){
             
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-
+        <?php require "partials/footer.php" ?>
 </body>
 </html>

@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<?php require "partials/header.php"?>
+        <?php require "partials/header.php" ?> 
+        <?php require "partials/footer.php" ?>
     <div class="contenedor_form">
 
         <form method="GET" action="insertar_servicio.php" class="formulario">
