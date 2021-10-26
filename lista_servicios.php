@@ -1,4 +1,12 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+<?php 
     
     $usu = $_GET["id_usuu"];
     $vehiculo = $_GET["id_vehii"];
@@ -88,7 +96,7 @@ if ($inc){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de servicios</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="estilos/app.css">
 </head>
 <body>
     <?php require "partials/header.php" ?>

@@ -15,7 +15,7 @@ html{
     box-sizing: inherit;
 }
 body{
-    background-image: url("estilos/imagenes/fondonegro.jpg");
+    background-image: url("../estilos/imagenes/fondonegro.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -267,7 +267,6 @@ label{
 }
 .formulario table th{
     color: var(--blanco);
-    font-size: 1.5;
     padding: 1rem;
 }
 .formulario table td{

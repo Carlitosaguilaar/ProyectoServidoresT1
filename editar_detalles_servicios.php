@@ -1,4 +1,12 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+<?php 
 
     $usu = $_GET["id_usu"];
     $tipo_servi = $_GET["tipo_servicio"];
