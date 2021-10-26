@@ -1,7 +1,17 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+<?php 
     
     $usu = $_GET["id_usuu"];
     $vehiculo = $_GET["id_vehii"];
+    
+    
     
     if (!$usu){
         header("Location:registro_usu.php");
@@ -25,6 +35,8 @@
             }
         }
     }
+    
+
 
 ?>
 <?php 
@@ -47,6 +59,8 @@ if ($inc){
             $año_fabri = $row2['Año_fabricacion'];
         }
     }
+    
+    
 }
 ?>
 
@@ -72,6 +86,9 @@ if ($inc){
 
 ?>
     
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +99,7 @@ if ($inc){
     <link rel="stylesheet" href="estilos/app.css">
 </head>
 <body>
-        <?php require "partials/header.php" ?> 
+    <?php require "partials/header.php" ?>
     <div class="contenedor_form">
         
             <div class="formulario">    
@@ -123,7 +140,10 @@ if ($inc){
                     <input type="submit" class="boton" name="submit" value="Editar vehículo" class="inputs">
                 </form>
 
-                <br><h3>Listado de Servicios</h3>
+                
+                <br>
+                
+                <h3>Listado de Servicios</h3>
                 
                     <?php 
 
@@ -136,6 +156,8 @@ if ($inc){
                             $nombre_servicio= $row3['Nombre'];
                             $precio_servicio = $row3['Precio'];
                             $fecha = $row3['fecha'];
+                            
+
                     ?>
 
                         <div class="contenedor_formulario_servicios">
@@ -144,17 +166,23 @@ if ($inc){
                             <div class="campo">
     
                                 <input type="submit" id="nombre_servicio" name="nombre_servicio" class="inputs" value="<?php echo $nombre_servicio ?>">
+
                                 <input type="date" id="fecha" name="fecha" class="inputs" value="<?php echo $fecha ?>" readonly>
                                 <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
                                 <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> 
                                 <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
-                             
+                                
+                                
+    
+    
                             </div>
                             <hr>
                             </form>
 
                         </div>
+
+
 
                     <?php 
 
@@ -163,19 +191,22 @@ if ($inc){
 
                     ?>
 
-              
+
+                
                 <form action="registro_servicios.php" method="GET">
                     <input type="submit" value="Añadir servicio" class="boton">
                     <input type="hidden" name="id_servi" value="<?php echo $id_servicio ?>">
                     <input type="hidden" name="id_vehi" value="<?php echo $id_vehii ?>">
                     <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
                     <input type="hidden" name="matricula" value="<?php echo $matricula ?>">
-                 
+
+                    
                 </form>
-                             
+               
+                
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-        <?php require "partials/footer.php" ?>
+
 
 </body>
 </html>

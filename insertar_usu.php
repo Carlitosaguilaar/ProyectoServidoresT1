@@ -1,9 +1,19 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+<?php 
 
+   
     $nombre = $_GET["nombre"];
     $email = $_GET["email"];
     $telefono = $_GET["telefono"];
     $contraseña = $_GET["pass"];
+
 
     
     $inc = require "conexion_database.php";
@@ -14,7 +24,8 @@
         $results = mysqli_query($conn, $consulta);
 
         echo ("Usuario creado <br>");
-        header("Location:index.php");
+        echo ("<a href=\"index.php\"><button>Volver</button></a>");
+
        
     }
 

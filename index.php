@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/app.css">
     
+
 </head>
 <body>
     
@@ -34,10 +35,12 @@
                        <input type="password" name="password" class="inputs" placeholder="Contraseña">
                    </div>
                    <p>Nuevo aquí? <a href="registro_usu.php">Regístrate</a></p>
-                   <input type="submit" value="Iniciar sesion" class="boton">    
-            </form>
+                   <input type="submit" value="Iniciar Sesión" class="boton">
+                   
+               </form>
        </div>
    </div>
+
 
 </body>
 </html>

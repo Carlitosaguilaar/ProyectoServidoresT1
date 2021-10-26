@@ -1,4 +1,12 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+<?php 
 
     $usu = $_GET["id_usu"];
     $matricula = $_GET["matricula"];
@@ -9,6 +17,7 @@
     print_r($id_vehi);
 
 
+    
     $inc = require "conexion_database.php";
     if($inc){
 

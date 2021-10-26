@@ -1,4 +1,13 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+
+<?php 
 
 $usu = $_GET["ID_Usuario"];
 if (!$usu){
@@ -45,11 +54,15 @@ if ($inc){
     </head>
     <body>
         
-        <?php require "partials/header.php" ?>         
+        <?php require "partials/header.php" ?>
+        
         <div class="contenedor_form">
             <div class="formulario">    
                 
                 <h1 class="ttilte">Datos del usuario</h1>
+                
+               
+                
 
                 <form method="GET" action="editar_usuario.php">
                     <div class="campo">
@@ -134,6 +147,6 @@ if ($inc){
                 
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-        <?php require "partials/footer.php" ?>
+        
     </body>
 </html>

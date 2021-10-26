@@ -1,4 +1,12 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+<?php 
 
     $usu = $_GET["id_usu"];
     $tipo_servi = $_GET["tipo_servicio"];
@@ -9,6 +17,7 @@
     $id_servicio = $_GET["id_servicio"];
     $nombre_usu = $_GET["nombre_usu"];
     $nombre_servicio = $_GET["nombre_servicio"];
+
 
 
     $inc = require "conexion_database.php";
