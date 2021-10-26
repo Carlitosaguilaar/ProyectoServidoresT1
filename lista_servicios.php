@@ -79,11 +79,10 @@ if ($inc){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de servicios</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="estilos/app.css">
 </head>
 <body>
         <?php require "partials/header.php" ?> 
-        <?php require "partials/footer.php" ?>
     <div class="contenedor_form">
         
             <div class="formulario">    
@@ -176,6 +175,7 @@ if ($inc){
                              
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
+        <?php require "partials/footer.php" ?>
 
 </body>
 </html>

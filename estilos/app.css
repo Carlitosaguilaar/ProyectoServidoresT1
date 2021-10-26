@@ -79,6 +79,7 @@ body{
     margin: 0 auto;
     margin-top: 4rem;
     background-color: var(--gris);
+    position: absolute; bottom: 0; left: 10%;
 }
 
 /* Esto es un comentario*/

@@ -14,11 +14,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de servicios</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="estilos/app.css">
 </head>
 <body>
         <?php require "partials/header.php" ?> 
-        <?php require "partials/footer.php" ?>
     <div class="contenedor_form">
 
         <form method="GET" action="insertar_servicio.php" class="formulario">
@@ -43,5 +42,7 @@
             <input type="submit" class="boton" name="submit" value="Registrar servicio" class="inputs">
         </form>
     </div>
+    <?php require "partials/footer.php" ?>
+
 </body>
 </html>
