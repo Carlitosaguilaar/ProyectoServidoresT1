@@ -16,7 +16,9 @@
         $results = mysqli_query($conn, $consulta);
 
         echo ("Usuario creado <br>");
-        header("Location:index.php");
+        echo ("<a href=\"index.php\"><button>Volver</button></a>");
+
+       
     }
 
 

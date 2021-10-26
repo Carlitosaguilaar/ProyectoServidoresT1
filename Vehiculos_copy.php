@@ -9,8 +9,6 @@ $inc = require "conexion_database.php";
 
 if ($inc){
 
-
-
     $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
     $results = mysqli_query($conn, $consulta);
 
@@ -53,6 +51,9 @@ if ($inc){
             <div class="formulario">    
                 
                 <h1 class="ttilte">Datos del usuario</h1>
+                
+               
+                
 
                 <form method="GET" action="editar_usuario.php">
                     <div class="campo">

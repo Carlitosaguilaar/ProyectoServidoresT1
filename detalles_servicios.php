@@ -137,7 +137,7 @@ if ($inc){
                                 </div>
                                 <div class="campo">
                                     <label for="precio_servicio">Precio del servicio:  </label>
-                                    <input type="number" id="precio_servicio" name="precio_servicio" class="inputs" value="<?php echo $precio_servicio ?>">
+                                    <input type="number" step="0.01" id="precio_servicio" name="precio_servicio" class="inputs" value="<?php echo $precio_servicio ?>">
                                 </div>
                                 <input type="submit" class="boton" name="submit" id="submit" value="Editar servicios">
                                 
