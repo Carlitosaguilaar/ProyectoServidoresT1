@@ -2,8 +2,8 @@
     <a href="#"></a>
     <nav class="navegador">
         <a href="">Contacto</a>
-        <a href=""><img width="15%" height="15%" src="estilos/imagenes/Twitter.png" alt=""></a>
-        <a href=""><img width="15%" height="15%" src="estilos/imagenes/Facebook.png" alt=""></a>
-        <a href=""><img width="15%" height="15%" src="estilos/imagenes/Instagram.png" alt=""></a>
+        <a href="">Hola</a>
+        <a href="">Como</a>
+        <a href="">Estas</a>
     </nav>
 </footer>
