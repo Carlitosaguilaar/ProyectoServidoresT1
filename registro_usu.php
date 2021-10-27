@@ -1,9 +1,6 @@
 <?php 
     //CONTROLAR SESIONES
-    session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
-    }
+    
     
 ?>
 <!DOCTYPE html>
@@ -18,7 +15,7 @@
 </head>
 <body>
 
-    <?php require "partials/header.php"?>
+    <!-- <?php require "partials/header.php"?> -->
     <div class="contenedor_form">
 
         <form method="GET" action="insertar_usu.php" class="formulario">
