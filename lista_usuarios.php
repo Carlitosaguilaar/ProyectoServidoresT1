@@ -1,9 +1,14 @@
 <?php 
-    // //CONTROLAR SESIONES
-    // session_start();
-    // if (!$_SESSION['username']){
-    //    header("Location:index.php");
-    // }
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+
+<?php 
+    
 
     $inc = require "conexion_database.php";
     if ($inc){
@@ -48,9 +53,10 @@
                 <form action="Vehiculos_copy.php" method="GET" class="formulario2" >
     
                     <div class="campo">
+                        <label for="ID_Usuario">ID Usuario: </label>
+                        <input type="submit" id="id_usuario" name="ID_Usuario" class="inputs" value="<?php echo $id_usu ?>">
     
-                        <input type="submit" id="id_usuario" name="id_usuario" class="inputs" value="ID de Usuario: <?php echo $id_usu ?>">
-    
+                        
                         <input type="submit" id="nombre" name="nombre" class="inputs" value="Nombre: <?php echo $nombre ?>">
     
                         <input type="text" id="pass" name="pass" class="inputs" value="Contraseña: <?php echo $contra ?>" readonly>
