@@ -2,8 +2,8 @@
     <a href="#"></a>
     <nav class="navegador">
         <a href="">Contacto</a>
-        <a href="">Hola</a>
-        <a href="">Como</a>
-        <a href="">Estas</a>
+        <a href="">Facebook</a>
+        <a href="">Twitter</a>
+        <a href="">Instagram</a>
     </nav>
 </footer>
