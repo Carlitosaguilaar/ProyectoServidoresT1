@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,13 @@
 </head>
 <body>
 
-    <?php require "partials/header.php"?>
+    <header class="headerr">
+        <a href="#">Proyecto Vehículos</a>
+        <nav class="navegador">
+            
+            <a href="logout.php">Logout</a>
+        </nav>
+    </header>
     <div class="contenedor_form">
 
         <form method="GET" action="insertar_usu.php" class="formulario">

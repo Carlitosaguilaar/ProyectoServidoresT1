@@ -267,11 +267,26 @@ label{
 }
 .formulario table th{
     color: var(--blanco);
-    font-size: 1.5;
     padding: 1rem;
 }
 .formulario table td{
     font-weight: bold;
     font-size: 1.3rem;
     padding: 1rem;
+}
+
+
+/* Fomulario de la lista de usuarios, la vista del admin*/
+
+.formulario4{
+    padding: 2rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px var(--gris);
+    
+}
+.formulario4 h3{
+    color: var(--gris);
+    font-size: 2rem;
 }

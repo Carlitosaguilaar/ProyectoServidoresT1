@@ -1,4 +1,13 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+
+<?php 
 
 $usu = $_GET["ID_Usuario"];
 if (!$usu){

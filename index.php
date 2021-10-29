@@ -29,13 +29,13 @@
            <form action="login.php" class="formulario_login" method="POST">
                    <h2 class="login_titulo">Login</h2>
                    <div class="campo">
-                       <input type="text" name="nombre" class="inputs" placeholder="Nombre" autocomplete="off">
+                       <input type="text" name="nombre" class="inputs" placeholder="Nombre" autocomplete="off" required>
                    </div>
                    <div class="campo">
-                       <input type="password" name="password" class="inputs" placeholder="Contraseña">
+                       <input type="password" name="password" class="inputs" placeholder="Contraseña" required>
                    </div>
                    <p>Nuevo aquí? <a href="registro_usu.php">Regístrate</a></p>
-                   <input type="submit" value="Registro" class="boton">
+                   <input type="submit" value="Iniciar Sesión" class="boton">
                    
                </form>
        </div>

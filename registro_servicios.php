@@ -1,4 +1,12 @@
 <?php 
+    //CONTROLAR SESIONES
+    session_start();
+    if (!$_SESSION['username']){
+       header("Location:index.php");
+    }
+    
+?>
+<?php 
 
     $vehiculo = $_GET["id_vehi"];
     $id_servicio = $_GET["id_servi"];
