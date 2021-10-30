@@ -23,8 +23,9 @@
         VALUES ('$nombre','$contraseña','$email', '$telefono')";
         $results = mysqli_query($conn, $consulta);
 
-        echo ("Usuario creado <br>");
-        echo ("<a href=\"index.php\"><button>Volver</button></a>");
+        if ($results){
+            header("Location:index.php");
+        }
 
        
     }

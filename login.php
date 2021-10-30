@@ -31,8 +31,8 @@
 
 
 
-?>
-<?php 
+
+
     if ($admin == 1 && $password == $contraseñaBBDD){
 
         session_start();   
