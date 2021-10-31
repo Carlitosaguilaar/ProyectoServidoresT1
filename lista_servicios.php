@@ -96,7 +96,10 @@ if ($inc){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de servicios</title>
-    <link rel="stylesheet" href="partials/app.css">
+    <link rel="stylesheet" href="estilos/CSS/all.min.css">
+    <link rel="stylesheet" href="estilos/CSS/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <?php require "partials/header.php" ?>
@@ -206,6 +209,7 @@ if ($inc){
                 
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-        <?php require "partials/footer.php" ?>
+
+
 </body>
 </html>
