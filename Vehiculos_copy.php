@@ -91,13 +91,17 @@ if ($inc){
                     </div>
                     
 
-                    <input type="submit" class="boton" name="submit" value="Editar usuario" class="inputs">
+                    <button class="boton">Editar Usuario <i class="far fa-edit"></i></button>
                 </form>
 
                 
                 <br>
                 
-                <h3>Listado de Vehículos</h3>
+                <div class="listado_vehiculo">
+                    <h3>Listado de Vehículos</h3>
+                    <i class="fas fa-car"></i>
+
+                </div>
                 
                     <?php 
 
