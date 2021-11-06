@@ -330,12 +330,12 @@ label{
 /*Iconos */
 
 .fas{
-    color: var(--primario);
+    color: var(--secundario);
     font-size: 1.1rem;
     padding: 1rem;
 }
 .far{
-    color: var(--primario);
+    color: var(--secundario);
     font-size: 1.1rem;
     padding: 1rem;
 }

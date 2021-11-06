@@ -33,14 +33,14 @@
 
 
 
-    if ($admin == 1 && $password == $contraseñaBBDD){
+    if ($admin == 1 && password_verify($password, $contraseñaBBDD)){
 
         session_start();   
         $_SESSION['username']=$nombre;
         header("Location:lista_usuarios.php");
         
     }
-    else if($admin == 0 && $password == $contraseñaBBDD){
+    else if($admin == 0 && password_verify($password, $contraseñaBBDD)){
         session_start();
         $_SESSION['username']=$nombre;
         header("Location:Vehiculos_copy.php?ID_Usuario=$usu");
@@ -49,7 +49,7 @@
     else{
         require "index.php";
         
-        echo ("<script type=\"text/javascript\">alert(\"Usuario o Contraseña Incorrectos\");</script>");
+        echo ("<script type=\"text/javascript\">alert(\" Usuario o Contraseña Incorrectos\");</script>");
 
     }
 
