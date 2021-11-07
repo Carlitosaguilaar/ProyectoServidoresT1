@@ -139,14 +139,21 @@ if ($inc){
 
                     </div>
                     
+                   
+                    <button class="boton">Editar Vehículo <i class="far fa-edit"></i></button>
+                        
 
-                    <input type="submit" class="boton" name="submit" value="Editar vehículo" class="inputs">
+                    
                 </form>
 
                 
                 <br>
                 
-                <h3>Listado de Servicios</h3>
+                <div class="listado_servicios">
+                    <h3>Listado de Servicios</h3>
+                    <i class="fas fa-list-alt"></i>
+
+                </div>
                 
                     <?php 
 

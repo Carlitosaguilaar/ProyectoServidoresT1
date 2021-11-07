@@ -12,7 +12,7 @@
     $nombre = $_GET["nombre"];
     $email = $_GET["email"];
     $telefono = $_GET["telefono"];
-    $contraseña = password_hash($_GET["pass"], PASSWORD_DEFAULT) ;
+    $contraseña = password_hash($_GET["pass"], PASSWORD_DEFAULT);
 
 
     
