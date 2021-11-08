@@ -17,7 +17,6 @@
     }
 
 
-    require "cookies.php";
     
 ?>
 <!DOCTYPE html>
@@ -33,7 +32,7 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <?php require "partials/header.php" ?>
+    <?php require "partials/header.php"?>
     <div class="contenedor_form">
 
         <div class="formulario4">

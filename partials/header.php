@@ -7,6 +7,7 @@
         <i class="fas fa-user"></i>
         <p><span><?php echo $_SESSION['username']?></span></p>
         <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        <p><?php require 'cookies.php'?></p>
     </nav>
 </header>
 
