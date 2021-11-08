@@ -54,10 +54,24 @@ body{
 
 
 }
+.user_logout{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header_flex{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    
+}
+.header_flex p{
+    margin: 0;
+}
 .headerr a{
     text-decoration: none;
     color: black;
-    padding: 2rem;
+    
     text-align: center;
     cursor: pointer;
     font-size: 1.4rem;
@@ -68,7 +82,9 @@ body{
 
 .navegador{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 .headerr .navegador a{
     font-size: 1.1rem;
