@@ -71,7 +71,7 @@
                         <input type="submit" id="id_usuario" name="ID_Usuario" class="inputs" value="<?php echo $id_usu ?>">
     
                         <label for="nombre" class="label2"><i class="far fa-user"></i></label>
-                        <input type="submit" id="nombre" name="nombre" class="inputs" value="<?php echo $nombre ?>">
+                        <input type="text" id="nombre" name="nombre" class="inputs" value="<?php echo $nombre ?>" readonly>
     
                         <label for="telefono" class="label2"><i class="fas fa-phone-square"></i></label>
                         <input type="text" id="telefono" name="telefono" class="inputs" value="<?php echo $telefono ?>" readonly>

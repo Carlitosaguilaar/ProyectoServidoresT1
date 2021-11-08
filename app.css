@@ -358,3 +358,24 @@ label{
 .label2{
     flex-basis: 2rem;
 }
+.fa-edit{
+    color: var(--secundario);
+    padding: 0;
+    margin-left: .5rem;
+    
+}
+
+/* Listado de vehículo (Posicionamiento de algunos iconos puntuales)*/
+
+.listado_vehiculo{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+.listado_servicios{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
