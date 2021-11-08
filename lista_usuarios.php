@@ -17,6 +17,7 @@
     }
 
 
+    require "cookies.php";
     
 ?>
 <!DOCTYPE html>
