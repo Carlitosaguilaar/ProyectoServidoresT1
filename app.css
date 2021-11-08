@@ -8,7 +8,7 @@
 
 html{
     box-sizing: border-box;
-    font-family: 'Prompt', sans-serif;
+  
 }
 *,*::after,
 *::before{
@@ -22,6 +22,7 @@ body{
     padding: 0;
     font-family: 'Prompt', sans-serif;
     overflow-x: hidden;
+    
     
     
     
@@ -289,4 +290,76 @@ label{
 .formulario4 h3{
     color: var(--gris);
     font-size: 2rem;
+}
+
+.listado_boton{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 1rem;
+    width: 42%;
+}
+
+.formulario5 .inputs{
+    padding: .8rem;
+   
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width: 20%;
+    cursor: pointer;
+    margin-right: 1rem;
+    background-color: transparent;
+    color: var(--gris);
+    box-shadow: 0px 1px 4px var(--secundario);
+}
+
+.formulario5 #id_usuario{
+    width: 5%;
+    border: 3px inset var(--secundario);
+    box-shadow: none;
+
+}
+.formulario5 #nombre{
+    width: 10%;
+}
+.formulario5 #telefono{
+    width: 10%;
+}
+
+/*Iconos */
+
+.fas{
+    color: var(--secundario);
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+.far{
+    color: var(--secundario);
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+.label2{
+    flex-basis: 2rem;
+}
+.fa-edit{
+    color: var(--secundario);
+    padding: 0;
+    margin-left: .5rem;
+    
+}
+
+/* Listado de vehículo (Posicionamiento de algunos iconos puntuales)*/
+
+.listado_vehiculo{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+.listado_servicios{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
 }

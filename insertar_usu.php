@@ -12,7 +12,7 @@
     $nombre = $_GET["nombre"];
     $email = $_GET["email"];
     $telefono = $_GET["telefono"];
-    $contraseña = $_GET["pass"];
+    $contraseña = password_hash($_GET["pass"], PASSWORD_DEFAULT);
 
 
     
@@ -23,8 +23,9 @@
         VALUES ('$nombre','$contraseña','$email', '$telefono')";
         $results = mysqli_query($conn, $consulta);
 
-        echo ("Usuario creado <br>");
-        echo ("<a href=\"index.php\"><button>Volver</button></a>");
+        if ($results){
+            header("Location:index.php");
+        }
 
        
     }

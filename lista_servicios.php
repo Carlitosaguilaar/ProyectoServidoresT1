@@ -96,6 +96,9 @@ if ($inc){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de servicios</title>
+    <link rel="stylesheet" href="estilos/CSS/all.min.css">
+    <link rel="stylesheet" href="estilos/CSS/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -136,14 +139,21 @@ if ($inc){
 
                     </div>
                     
+                   
+                    <button class="boton">Editar Vehículo <i class="far fa-edit"></i></button>
+                        
 
-                    <input type="submit" class="boton" name="submit" value="Editar vehículo" class="inputs">
+                    
                 </form>
 
                 
                 <br>
                 
-                <h3>Listado de Servicios</h3>
+                <div class="listado_servicios">
+                    <h3>Listado de Servicios</h3>
+                    <i class="fas fa-list-alt"></i>
+
+                </div>
                 
                     <?php 
 

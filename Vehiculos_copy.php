@@ -10,9 +10,9 @@
 <?php 
 
 $usu = $_GET["ID_Usuario"];
-if (!$usu){
-    header("Location:registro_usu.php");
-}
+// if (!$usu){
+//     header("Location:registro_usu.php");
+// }
 
 $inc = require "conexion_database.php";
 
@@ -48,6 +48,9 @@ if ($inc){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos/CSS/all.min.css">
+        <link rel="stylesheet" href="estilos/CSS/fontawesome-all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="app.css">
         
         <title>Lista de Vehículos</title>
@@ -88,13 +91,17 @@ if ($inc){
                     </div>
                     
 
-                    <input type="submit" class="boton" name="submit" value="Editar usuario" class="inputs">
+                    <button class="boton">Editar Usuario <i class="far fa-edit"></i></button>
                 </form>
 
                 
                 <br>
                 
-                <h3>Listado de Vehículos</h3>
+                <div class="listado_vehiculo">
+                    <h3>Listado de Vehículos</h3>
+                    <i class="fas fa-car"></i>
+
+                </div>
                 
                     <?php 
 
