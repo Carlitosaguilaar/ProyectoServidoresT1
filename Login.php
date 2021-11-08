@@ -6,9 +6,6 @@
     
     $inc = require "conexion_database.php";
 
-    
-    
-    
     if ($inc){
         
         
@@ -27,6 +24,8 @@
             
         }
     }
+
+
 
 
 
