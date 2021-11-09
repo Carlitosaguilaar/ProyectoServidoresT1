@@ -1,4 +1,12 @@
 <?php 
+
+    
+    $nombre_cookie = 'galletas';
+    $fecha = new DateTime();
+    $valor = $fecha -> format('d-m-Y H:i:s');
+    setcookie($nombre_cookie,$valor);
+    
+
     session_start();
     $nombre = $_POST["nombre"];
     $contraseñaBBDD= "";
@@ -6,6 +14,9 @@
     
     $inc = require "conexion_database.php";
 
+    
+    
+    
     if ($inc){
         
         
@@ -24,8 +35,6 @@
             
         }
     }
-
-
 
 
 
