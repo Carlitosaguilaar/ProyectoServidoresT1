@@ -1,7 +1,7 @@
 
 
 <header class="headerr">
-    <a href="#">Proyecto Vehículos</a>
+    <h1><a href="#">Proyecto Vehículos</a></h1>
     <nav class="navegador">
         <div class="user_logout">
 

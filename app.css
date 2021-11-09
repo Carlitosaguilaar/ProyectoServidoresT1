@@ -54,6 +54,10 @@ body{
 
 
 }
+.headerr h1{
+    align-self: center;
+}
+
 .user_logout{
     display: flex;
     justify-content: space-evenly;
@@ -77,6 +81,7 @@ body{
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: bold;
+    
 
 }
 
