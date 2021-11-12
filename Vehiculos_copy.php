@@ -1,4 +1,6 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
     session_start();
     if (!$_SESSION['username']){
@@ -16,20 +18,16 @@ $usu = $_GET["ID_Usuario"];
 
 $inc = require "conexion_database.php";
 
+
 if ($inc){
 
-    $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
-    $results = mysqli_query($conn, $consulta);
-
-    if ($results){
-
-        while ($row = $results->fetch_array()){
-
-            $nombre = $row['Nombre'];
-            $email = $row['Email'];
-            $telefono = $row['Telefono'];
-        }
+    $results = getID_Usu($conn, $usu); //results devuelve un array
+    if ($results){        
+            $nombre = $results['Nombre'];
+            $email = $results['Email'];
+            $telefono = $results['Telefono'];        
     }
+
 }
 ?>
 
