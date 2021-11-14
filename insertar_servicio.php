@@ -1,8 +1,15 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["id_usu"];
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
+    if (!isset($usu)){
+        header("Location:index.php");
+    }
+    
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
+        header("Location:index.php");
     }
     
 ?>
@@ -13,7 +20,7 @@
     $precio_servicio = $_GET["precio_servicio"];
     $id_vehiculo = $_GET["id_vehiculo"];
     $id_servicio = $_GET["id_servicio"];
-    $id_usuario = $_GET["id_usu"];
+    //$id_usuario = $_GET["id_usu"]; comentada porque se está usando en línea 5
     $fecha = $_GET["fecha"];
     $matricula = $_GET["matricula"]; //no hace falta
     
@@ -45,7 +52,7 @@
         //$users = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
         echo ("<script>alert(\"Servicio creado con éxito\")</script>");
-        header("Location:lista_servicios.php?id_vehii=$id_vehiculo&id_usuu=$id_usuario");
+        header("Location:lista_servicios.php?id_vehii=$id_vehiculo&id_usuu=$usu");
         //acción
         }
     

@@ -15,6 +15,17 @@
 
         return null;
     }
+    // Lo mismo que la función anterior pero en este caso para asignar los vehículos con el ID de usuario correspondiente.
+    function getID_Vehiculo($connLocal, $usuLocal){
+        $consulta = "SELECT * FROM vehiculos where ID_Usuario = $usuLocal";
+        $results = mysqli_query($connLocal, $consulta);
+        if ($results){
+
+            return $results->fetch_array();
+        }
+
+        return null;
+    }
 
 
 ?>

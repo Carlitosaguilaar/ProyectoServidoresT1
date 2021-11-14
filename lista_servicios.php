@@ -1,14 +1,20 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["id_usuu"];
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
+    if (!isset($usu)){
+        header("Location:index.php");
     }
     
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
+        header("Location:index.php");
+    }
 ?>
 <?php 
     
-    $usu = $_GET["id_usuu"];
+    //$usu = $_GET["id_usuu"]; comentada porque  se está usando en la línea 5
     $vehiculo = $_GET["id_vehii"];
     
     
@@ -31,7 +37,7 @@
                 $nombre = $row['Nombre'];
                 $email = $row['Email'];
                 $telefono = $row['Telefono'];
-                $id_usu = $row['ID_Usuario'];
+                
             }
         }
     }
@@ -181,7 +187,7 @@ if ($inc){
                                 <input type="hidden" name="id_vehiculo" value="<?php echo $id_vehiculo_fk ?>">
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
                                 <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> 
-                                <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
+                                <input type="hidden" name="id_usu" value="<?php echo $usu ?>">
                                 
                                 
     
@@ -207,7 +213,7 @@ if ($inc){
                     <input type="submit" value="Añadir servicio" class="boton">
                     <input type="hidden" name="id_servi" value="<?php echo $id_servicio ?>">
                     <input type="hidden" name="id_vehi" value="<?php echo $id_vehii ?>">
-                    <input type="hidden" name="id_usu" value="<?php echo $id_usu ?>">
+                    <input type="hidden" name="id_usu" value="<?php echo $usu ?>">
                     <input type="hidden" name="matricula" value="<?php echo $matricula ?>">
 
                     
