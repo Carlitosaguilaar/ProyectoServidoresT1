@@ -1,10 +1,12 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
-    }
     
+    if($_SESSION['admin'] == 0){
+        header("Location:index.php");
+    }
 ?>
 
 <?php 

@@ -1,7 +1,14 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["ID_Usuario"];
     session_start();
-    if (!$_SESSION['username']){
+    if (!isset($usu)){
+        header("Location:index.php");
+    }
+    
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
        header("Location:index.php");
     }
     
@@ -9,27 +16,19 @@
 
 <?php 
 
-$usu = $_GET["ID_Usuario"];
-// if (!$usu){
-//     header("Location:registro_usu.php");
-// }
 
 $inc = require "conexion_database.php";
 
+
 if ($inc){
 
-    $consulta = "SELECT * FROM usuarios where ID_Usuario = $usu";
-    $results = mysqli_query($conn, $consulta);
-
-    if ($results){
-
-        while ($row = $results->fetch_array()){
-
-            $nombre = $row['Nombre'];
-            $email = $row['Email'];
-            $telefono = $row['Telefono'];
-        }
+    $results = getID_Usu($conn, $usu); //results devuelve un array
+    if ($results){        
+            $nombre = $results['Nombre'];
+            $email = $results['Email'];
+            $telefono = $results['Telefono'];        
     }
+
 }
 ?>
 
@@ -64,9 +63,6 @@ if ($inc){
                 
                 <h1 class="ttilte">Datos del usuario</h1>
                 
-               
-                
-
                 <form method="GET" action="editar_usuario.php">
                     <div class="campo">
                         <label for="nombre">Nombre: </label>

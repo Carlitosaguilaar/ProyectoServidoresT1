@@ -1,14 +1,20 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["ID_Usuario"];
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
+    if (!isset($usu)){
+        header("Location:index.php");
     }
     
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
+        header("Location:index.php");
+    }
 ?>
 <?php 
 
-    $usu = $_GET["ID_Usuario"];
+    //$usu = $_GET["ID_Usuario"]; comentada porque se usa en la línea 5
     require "conexion_database.php";
     
 

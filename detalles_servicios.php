@@ -1,10 +1,16 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["id_usu"];
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
+    if (!isset($usu)){
+        header("Location:index.php");
     }
     
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
+        header("Location:index.php");
+    }
 ?>
 <?php 
     
@@ -156,7 +162,7 @@ if ($inc){
                                 <input type="hidden" name="id_servicio" value="<?php echo $id_servicio ?>">
                                 <input type="hidden" name="nombre_usu" value="<?php echo $nombre_usu ?>"> <!-- Línea nueva agregada -->
                                 <input type="hidden" name="nombre_servicio" value="<?php echo $nombre_servicio ?>">
-                                <input type="hidden" name="id_usu" value="<?php echo $id_usu_fk?>">
+                                <input type="hidden" name="id_usu" value="<?php echo $usu ?>">
                                 
     
     

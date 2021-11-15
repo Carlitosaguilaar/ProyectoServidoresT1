@@ -43,14 +43,18 @@
 
     if ($admin == 1 && password_verify($password, $contraseñaBBDD)){
 
-        session_start();   
+        session_start();
+        $_SESSION['admin']=$admin;  
         $_SESSION['username']=$nombre;
+        $_SESSION['id']=$usu;
         header("Location:lista_usuarios.php");
         
     }
     else if($admin == 0 && password_verify($password, $contraseñaBBDD)){
         session_start();
+        $_SESSION['admin']=$admin;  
         $_SESSION['username']=$nombre;
+        $_SESSION['id']=$usu;
         header("Location:Vehiculos_copy.php?ID_Usuario=$usu");
 
     }
