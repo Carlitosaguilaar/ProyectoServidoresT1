@@ -1,10 +1,16 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["id_usu"];
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
+    if (!isset($usu)){
+        header("Location:index.php");
     }
     
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
+        header("Location:index.php");
+    }
 ?>
 <?php 
 
@@ -13,7 +19,7 @@
     $marca = $_GET["marca"];
     $modelo = $_GET["modelo"];
     $año_fabri = $_GET["año_fabri"];
-    $usuu = $_GET["id_usu"];
+    //$usu = $_GET["id_usu"]; comentada porque se está usando en línea 5
     
 
 
@@ -34,7 +40,7 @@
         echo "Connected successfully.";
 
         $consulta = "INSERT INTO vehiculos (Matricula, Id_usuario, Marca, Modelo, Año_fabricacion)
-        VALUES ('$matricula','$usuu', '$marca','$modelo', '$año_fabri')";
+        VALUES ('$matricula','$usu', '$marca','$modelo', '$año_fabri')";
 
         $results = mysqli_query($conn, $consulta);
 
@@ -45,7 +51,7 @@
         //$users = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
         echo ("<script>alert(\"Vehículo creado con éxito\")</script>");
-        header("Location:Vehiculos_copy.php?ID_Usuario=$usuu");
+        header("Location:Vehiculos_copy.php?ID_Usuario=$usu");
         //acción
         }
     

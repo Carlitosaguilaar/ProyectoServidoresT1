@@ -1,14 +1,20 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["id_usu"];
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
+    if (!isset($usu)){
+        header("Location:index.php");
     }
     
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
+    header("Location:index.php");
+    } 
 ?>
 <?php 
 
-    $usu = $_GET["id_usu"];
+    // $usu = $_GET["id_usu"]; comentada porque ya está usada en la línea 5
     $nombre = $_GET["nombre"];
     $email = $_GET["email"];
     $telefono = $_GET["telefono"];

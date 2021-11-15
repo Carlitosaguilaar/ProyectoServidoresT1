@@ -1,16 +1,22 @@
 <?php 
+    //Traerme las funciones
+    require "funciones.php";
     //CONTROLAR SESIONES
+    $usu = $_GET["id_usu"];
     session_start();
-    if (!$_SESSION['username']){
-       header("Location:index.php");
+    if (!isset($usu)){
+        header("Location:index.php");
     }
     
+    if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
+        header("Location:index.php");
+    }
 ?>
 <?php 
 
     $vehiculo = $_GET["id_vehi"];
     $id_servicio = $_GET["id_servi"];
-    $id_usuario = $_GET["id_usu"];
+    //$id_usuario = $_GET["id_usu"]; comentada porque se está usando en línea 5
     $matricula = $_GET["matricula"];
     require "conexion_database.php";
     
