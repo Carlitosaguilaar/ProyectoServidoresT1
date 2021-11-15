@@ -39,18 +39,19 @@
 
         echo "Connected successfully.";
 
-        $consulta = "INSERT INTO vehiculos (Matricula, Id_usuario, Marca, Modelo, Año_fabricacion)
-        VALUES ('$matricula','$usu', '$marca','$modelo', '$año_fabri')";
+        // $consulta = "INSERT INTO vehiculos (Matricula, Id_usuario, Marca, Modelo, Año_fabricacion)
+        // VALUES ('$matricula','$usu', '$marca','$modelo', '$año_fabri')";
 
-        $results = mysqli_query($conn, $consulta);
+        // $results = mysqli_query($conn, $consulta);
+        $results = insert_vehiculos($conn, $matricula, $usu, $marca, $modelo, $año_fabri);
 
         if ($results === false) {
         echo mysqli_error($conn);
         echo("Ha ocurrido un error inesperado");
-        } else {
+        } 
+        else {
         //$users = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
-        echo ("<script>alert(\"Vehículo creado con éxito\")</script>");
         header("Location:Vehiculos_copy.php?ID_Usuario=$usu");
         //acción
         }

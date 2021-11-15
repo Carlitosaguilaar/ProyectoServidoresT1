@@ -1,4 +1,6 @@
 <?php 
+    //Traerme las funciones
+    require 'funciones.php';
     //CONTROLAR SESIONES
     session_start();
     if (!$_SESSION['username']){
@@ -35,9 +37,7 @@
         }
 
         if ($results){
-            $consulta2 = "INSERT INTO usuarios (Nombre, Contraseña, Email, Telefono)
-            VALUES ('$nombre','$contraseña','$email', '$telefono')";
-            $results2 = mysqli_query($conn, $consulta2);
+            $results2 = insert_usuarios($conn, $nombre, $contraseña, $email, $telefono);
 
             if ($admin == 1){    
                 header("Location:lista_usuarios.php");

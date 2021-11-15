@@ -14,8 +14,9 @@
 
     $inc = require "conexion_database.php";
     if ($inc){
-        $consulta = "SELECT * FROM usuarios;";
-        $results = mysqli_query($conn, $consulta);
+        // $consulta = "SELECT * FROM usuarios;";
+        // $results = mysqli_query($conn, $consulta);
+        $results = getConsulta_usuarios_all($conn);
     }
 
 
