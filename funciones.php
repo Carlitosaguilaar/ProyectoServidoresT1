@@ -72,6 +72,34 @@
             return null;
         }
     }
+    // Funcion para obtener el id de vehículo y filtra resultados con el (Usado en detalles_servicios)
+    function Vehiculo_servicio($connLocal, $vehiculoLocal){
+        $consulta = "SELECT * FROM vehiculos where ID_Vehiculo = '$vehiculoLocal'";
+        $results = mysqli_query($connLocal, $consulta);
+
+        if ($results){
+
+            return $results->fetch_array();
+        }
+
+        return null;
+    }
+    //Funcion para mostra los detalles del servicio (Usado en detalles_servicios)
+    function detalle_servicio($connLocal,$vehiculoLocal,$id_servicioLocal){
+
+        $consulta = "SELECT * FROM servicios where ID_vehiculo = $vehiculoLocal AND ID_Servicio = $id_servicioLocal";
+        $results = mysqli_query($connLocal, $consulta);
+
+        if ($results){
+
+            return $results->fetch_array();
+        }
+        else{
+            return null;
+        }
+    }
+
+
 
 
 

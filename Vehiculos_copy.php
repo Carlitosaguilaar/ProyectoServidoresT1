@@ -104,10 +104,10 @@ if ($inc){
                     if ($results2){
 
                         while ($row = $results2->fetch_array()){
-                            $id_vehi = $row['ID_Vehiculo'];
-                            $matricula = $row['Matricula'];
-                            $marca = $row['Marca'];
-                            $modelo = $row['Modelo'];
+                        $id_vehi = $row['ID_Vehiculo'];
+                        $matricula = $row['Matricula'];
+                        $marca = $row['Marca'];
+                        $modelo = $row['Modelo'];
 
                     ?>
 
