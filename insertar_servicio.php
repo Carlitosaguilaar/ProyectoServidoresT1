@@ -6,10 +6,12 @@
     session_start();
     if (!isset($usu)){
         header("Location:index.php");
+        
     }
     
     if($_SESSION['id'] != $usu && $_SESSION['admin'] == 0){
         header("Location:index.php");
+        
     }
     
 ?>

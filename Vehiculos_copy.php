@@ -22,20 +22,23 @@ $inc = require "conexion_database.php";
 
 if ($inc){
 
-    $results = getID_Usu($conn, $usu); //results devuelve un array
+    $results = getConsulta_usuarios($conn, $usu); //results devuelve un array
     if ($results){        
-            $nombre = $results['Nombre'];
-            $email = $results['Email'];
-            $telefono = $results['Telefono'];        
+        $nombre = $results['Nombre'];
+        $email = $results['Email'];
+        $telefono = $results['Telefono'];        
     }
 
 }
+?>
+
+<?php 
 
 if ($inc){
     
-    $consulta2 = "SELECT * FROM vehiculos where ID_Usuario = $usu";
-    $results2 = mysqli_query($conn, $consulta2);
-    
+    // $consulta2 = "SELECT * FROM vehiculos where ID_Usuario = $usu";
+    // $results2 = mysqli_query($conn, $consulta2);
+    $results2 = getConsulta_vehiculos($conn,$usu);
 }
 ?>
 
@@ -101,10 +104,10 @@ if ($inc){
                     if ($results2){
 
                         while ($row = $results2->fetch_array()){
-                            $id_vehi = $row['ID_Vehiculo'];
-                            $matricula = $row['Matricula'];
-                            $marca = $row['Marca'];
-                            $modelo = $row['Modelo'];
+                        $id_vehi = $row['ID_Vehiculo'];
+                        $matricula = $row['Matricula'];
+                        $marca = $row['Marca'];
+                        $modelo = $row['Modelo'];
 
                     ?>
 
@@ -147,6 +150,7 @@ if ($inc){
                 
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
+        
         
     </body>
 </html>
