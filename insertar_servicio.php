@@ -57,9 +57,5 @@
         header("Location:lista_servicios.php?id_vehii=$id_vehiculo&id_usuu=$usu");
         //acción
         }
-    
-       
     }
-
-
 ?>

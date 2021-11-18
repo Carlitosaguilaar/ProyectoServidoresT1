@@ -55,9 +55,5 @@
         header("Location:Vehiculos_copy.php?ID_Usuario=$usu");
         //acción
         }
-    
-       
     }
-
-
 ?>
