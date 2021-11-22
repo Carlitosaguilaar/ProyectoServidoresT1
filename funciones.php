@@ -1,5 +1,4 @@
 <?php 
-
     /*Esta función nos realizará la consulta del ID de usuario en la tabla de Usuarios
     y si la consulta devuelve algo, nos retornará una variable (array) que podremos usar para obtener 
     los datos de la base de datos que necesitemos [Ejemplo de uso en Vehiculos_copy] */
@@ -97,6 +96,11 @@
         else{
             return null;
         }
+    }
+    function sumas($num1, $num2){
+        $resultado = $num1 + $num2;
+
+        return $resultado;
     }
 
 
