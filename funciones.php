@@ -113,4 +113,11 @@
         }
     }
 
+    //
+    function suma_nums($dato1,$dato2){
+
+        $results = $dato1 + $dato2;
+
+        return $results;
+    }
 ?>
