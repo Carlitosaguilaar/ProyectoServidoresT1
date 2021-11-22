@@ -19,8 +19,6 @@
     //$id_usuario = $_GET["id_usu"]; comentada porque se está usando en línea 5
     $matricula = $_GET["matricula"];
     require "conexion_database.php";
-    
-
 ?>
 
 <!DOCTYPE html>
@@ -60,9 +58,6 @@
     
             </div>
             
-    
-            
-    
             <input type="submit" class="boton" name="submit" value="Registrar servicio" class="inputs">
         </form>
     </div>

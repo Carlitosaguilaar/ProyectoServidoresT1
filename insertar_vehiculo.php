@@ -14,23 +14,18 @@
 ?>
 <?php 
 
-   
     $matricula = $_GET["matricula"];
     $marca = $_GET["marca"];
     $modelo = $_GET["modelo"];
     $año_fabri = $_GET["año_fabri"];
     //$usu = $_GET["id_usu"]; comentada porque se está usando en línea 5
-    
-
-
-    
+     
     $inc = require "conexion_database.php";
     if($inc){
 
         /*$consulta = "INSERT INTO vehiculos (Matricula, Id_usuario, Marca, Modelo, Año_fabricacion)
         VALUES ('$matricula','$usuu', '$marca','$modelo', '$año_fabri')";
         $results = mysqli_query($conn, $consulta);*/
-
 
         if (mysqli_connect_error()) {
         echo mysqli_connect_error();

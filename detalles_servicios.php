@@ -18,9 +18,7 @@
     $vehiculo = $_GET["id_vehiculo"];
     $id_servicio = $_GET["id_servicio"];
     $nombre_servicio = $_GET["nombre_servicio"];
-  
-    
-    
+
     $inc = require "conexion_database.php";
 
 if ($inc){
@@ -53,11 +51,8 @@ if ($inc){
         $descripcion = $results2['descripcion'];
         $fecha = $results2['fecha'];   
     }
-
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -104,17 +99,10 @@ if ($inc){
                     </tr>  
                         
                 </table>
-                    
-                   
-
-                
+               
                 <br>
                 <h1> <span><?php  echo $nombre_servicio ?></span></h1>
                 <h3>Detalles del servicio</h3>
-                
-                    
-
-                    
 
                 <div class="contenedor_formulario_servicios">
                     <form action="editar_detalles_servicios.php" method="GET" class="formulario_3">
@@ -142,27 +130,10 @@ if ($inc){
                         <input type="hidden" name="nombre_usu" value="<?php echo $nombre_usu ?>"> <!-- Línea nueva agregada -->
                         <input type="hidden" name="nombre_servicio" value="<?php echo $nombre_servicio ?>">
                         <input type="hidden" name="id_usu" value="<?php echo $usu ?>">
-                        
-
-
-                        <hr>
-                    
+                        <hr>                  
                     </form>
-
                 </div>
-
-
-
-                  
-
-
-                
-        
-               
-                
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-
-
 </body>
 </html>

@@ -10,16 +10,12 @@
 ?>
 
 <?php 
-    
-
     $inc = require "conexion_database.php";
     if ($inc){
         // $consulta = "SELECT * FROM usuarios;";
         // $results = mysqli_query($conn, $consulta);
         $results = getConsulta_usuarios_all($conn);
     }
-
-
     
 ?>
 <!DOCTYPE html>
@@ -80,16 +76,10 @@
                         <input type="text" id="telefono" name="telefono" class="inputs" value="<?php echo $telefono ?>" readonly>
                         <label for="email" class="label2"><i class="fas fa-envelope"></i></label>
                         <input type="text" id="email" name="email" class="inputs" value="<?php echo $email ?>" readonly>
-                        
-    
-    
-                        
+                         
                     </div>
                     <hr>
                 </form>
-    
-    
-    
                 <?php 
     
                     } // Llave que cierra el bucle while
@@ -98,7 +88,5 @@
                 ?>
         </div>
     </div>
-
-
 </body>
 </html>

@@ -17,8 +17,6 @@
     //$usu = $_GET["id_usuu"]; comentada porque  se está usando en la línea 5
     $vehiculo = $_GET["id_vehii"];
     
-    
-    
     if (!$usu){
         header("Location:registro_usu.php");
     }
@@ -41,9 +39,6 @@
             }
         }
     }
-    
-
-
 ?>
 <?php 
 //CONSULTA 2
@@ -65,8 +60,6 @@ if ($inc){
             $año_fabri = $row2['Año_fabricacion'];
         }
     }
-    
-    
 }
 ?>
 
@@ -89,12 +82,8 @@ if ($inc){
         //     }
         // }
     }
-
 ?>
     
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -148,32 +137,23 @@ if ($inc){
                    
                     <button class="boton">Editar Vehículo <i class="far fa-edit"></i></button>
                         
-
-                    
                 </form>
-
-                
                 <br>
                 
                 <div class="listado_servicios">
                     <h3>Listado de Servicios</h3>
                     <i class="fas fa-list-alt"></i>
-
                 </div>
                 
                     <?php 
-
                     if ($results3){
                     
-                        while ($row3 = $results3->fetch_array()){
-                            
+                        while ($row3 = $results3->fetch_array()){  
                             $id_servicio = $row3['ID_Servicio'];
                             $id_vehiculo_fk = $row3['ID_vehiculo'];
                             $nombre_servicio= $row3['Nombre'];
                             $precio_servicio = $row3['Precio'];
                             $fecha = $row3['fecha'];
-                            
-
                     ?>
 
                         <div class="contenedor_formulario_servicios">
@@ -189,16 +169,11 @@ if ($inc){
                                 <input type="hidden" name="nombre_usu" value="<?php echo $nombre ?>"> 
                                 <input type="hidden" name="id_usu" value="<?php echo $usu ?>">
                                 
-                                
-    
-    
                             </div>
                             <hr>
                             </form>
 
                         </div>
-
-
 
                     <?php 
 
@@ -206,23 +181,16 @@ if ($inc){
                     } //Llave que cierra el if
 
                     ?>
-
-
                 
                 <form action="registro_servicios.php" method="GET">
                     <input type="submit" value="Añadir servicio" class="boton">
                     <input type="hidden" name="id_servi" value="<?php echo $id_servicio ?>">
                     <input type="hidden" name="id_vehi" value="<?php echo $id_vehii ?>">
                     <input type="hidden" name="id_usu" value="<?php echo $usu ?>">
-                    <input type="hidden" name="matricula" value="<?php echo $matricula ?>">
-
-                    
+                    <input type="hidden" name="matricula" value="<?php echo $matricula ?>">     
                 </form>
-               
-                
+                               
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-
-
 </body>
 </html>

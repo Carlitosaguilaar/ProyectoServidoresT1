@@ -16,7 +16,6 @@
     
 ?>
 <?php 
-
    
     $nombre_servicio = $_GET["nombre_servicio"];
     $precio_servicio = $_GET["precio_servicio"];
@@ -33,7 +32,6 @@
         /*$consulta = "INSERT INTO vehiculos (Matricula, Id_usuario, Marca, Modelo, Año_fabricacion)
         VALUES ('$matricula','$usuu', '$marca','$modelo', '$año_fabri')";
         $results = mysqli_query($conn, $consulta);*/
-
 
         if (mysqli_connect_error()) {
         echo mysqli_connect_error();

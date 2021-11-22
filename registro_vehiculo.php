@@ -20,7 +20,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,8 +69,6 @@
                 <input type="text" id="id_usu" name="id_usu" placeholder="ID usuario" class="inputs" required>
     
             </div> -->
-    
-            
     
             <input type="submit" class="boton" name="submit" value="Añadir Vehículo" class="inputs">
         </form>

@@ -10,19 +10,14 @@
 ?>
 <?php 
 
-    
-
     $nombre = $_GET["nombre"];
     $email = $_GET["email"];
     $telefono = $_GET["telefono"];
     $contraseña = password_hash($_GET["pass"], PASSWORD_DEFAULT);
-
-
-    
+   
     $inc = require "conexion_database.php";
     if($inc){
-        
-        
+         
         $consulta = "SELECT * FROM usuarios WHERE Nombre = '$user'";
         $results = mysqli_query($conn, $consulta);
     

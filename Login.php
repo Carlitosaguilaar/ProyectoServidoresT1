@@ -1,12 +1,10 @@
 <?php 
-
-    
+   
     $nombre_cookie = 'galletas';
     $fecha = new DateTime();
     $valor = $fecha -> format('d-m-Y H:i:s');
     setcookie($nombre_cookie,$valor);
     
-
     session_start();
     $nombre = $_POST["nombre"];
     $contraseñaBBDD= "";
@@ -14,12 +12,8 @@
     
     $inc = require "conexion_database.php";
 
-    
-    
-    
     if ($inc){
-        
-        
+                
             $consulta = "SELECT * FROM usuarios WHERE Nombre = '$nombre'";
             $results = mysqli_query($conn, $consulta);
     
@@ -30,16 +24,9 @@
                 $usu = $row['ID_Usuario'];
                 $contraseñaBBDD = $row['Contraseña'];
                 $admin = $row['Admin'];
-            }
-
-            
+            }    
         }
     }
-
-
-
-
-
 
     if ($admin == 1 && password_verify($password, $contraseñaBBDD)){
 
@@ -63,10 +50,5 @@
         
         echo ("<script type=\"text/javascript\">alert(\" Usuario o Contraseña Incorrectos\");</script>");
 
-    }
-
-        
-    
+    }  
 ?>
-
-

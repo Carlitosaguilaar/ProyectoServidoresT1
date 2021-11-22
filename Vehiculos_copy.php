@@ -28,7 +28,6 @@ if ($inc){
         $email = $results['Email'];
         $telefono = $results['Telefono'];        
     }
-
 }
 ?>
 
@@ -123,9 +122,7 @@ if ($inc){
                             <input type="submit" id="modelo" name="modelo" class="inputs" value="Modelo: <?php echo $modelo ?>">
                             <input type="hidden" name="id_vehii" value="<?php echo $id_vehi ?>">
                             <input type="hidden" name="id_usuu" value="<?php echo $usu ?>">
-                            
-
-    
+                                
                             
                         </div>
                         <hr>
@@ -139,8 +136,6 @@ if ($inc){
                     } //Llave que cierra el if
 
                     ?>
-
-
                 
                 <form action="registro_vehiculo.php" method="GET">
                     <input type="submit" value="Añadir vehículo" class="boton">
@@ -150,7 +145,5 @@ if ($inc){
                 
             </div> <!-- Cierre del formulario -->
         </div> <!-- cierre de contenedor_form -->
-        
-        
     </body>
 </html>

@@ -52,8 +52,6 @@
     
             </div> -->
     
-            
-    
             <input type="submit" class="boton" name="submit" value="Crear usuario" class="inputs">
         </form>
     </div>
